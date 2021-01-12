@@ -79,3 +79,9 @@ C:\Users\Piet\Documents\School\Minor\000_assignment_3_starting_code\shared\bin\D
 C:\Users\Piet\Documents\School\Minor\000_assignment_3_starting_code\shared\obj\x86\Debug\shared.csproj.CoreCompileInputs.cache
 C:\Users\Piet\Documents\School\Minor\000_assignment_3_starting_code\shared\obj\x86\Debug\shared.dll
 C:\Users\Piet\Documents\School\Minor\000_assignment_3_starting_code\shared\obj\x86\Debug\shared.pdb
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\bin\Debug\shared.dll
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\bin\Debug\shared.pdb
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\obj\x86\Debug\shared.csprojAssemblyReference.cache
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\obj\x86\Debug\shared.csproj.CoreCompileInputs.cache
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\obj\x86\Debug\shared.dll
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\obj\x86\Debug\shared.pdb

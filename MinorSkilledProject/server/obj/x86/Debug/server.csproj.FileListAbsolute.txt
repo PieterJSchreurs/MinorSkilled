@@ -140,3 +140,12 @@ C:\Users\Piet\Documents\School\Minor\000_assignment_3_starting_code\server\obj\x
 C:\Users\Piet\Documents\School\Minor\000_assignment_3_starting_code\server\obj\x86\Debug\server.csproj.CopyComplete
 C:\Users\Piet\Documents\School\Minor\000_assignment_3_starting_code\server\obj\x86\Debug\server.exe
 C:\Users\Piet\Documents\School\Minor\000_assignment_3_starting_code\server\obj\x86\Debug\server.pdb
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\server\bin\Debug\server.exe
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\server\bin\Debug\server.pdb
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\server\bin\Debug\shared.dll
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\server\bin\Debug\shared.pdb
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\server\obj\x86\Debug\server.csprojAssemblyReference.cache
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\server\obj\x86\Debug\server.csproj.CoreCompileInputs.cache
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\server\obj\x86\Debug\server.csproj.CopyComplete
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\server\obj\x86\Debug\server.exe
+C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\server\obj\x86\Debug\server.pdb
