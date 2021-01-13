@@ -14,6 +14,7 @@ public class LobbyView : View
     [SerializeField] private Text _textOutput = null;
     [SerializeField] private ScrollRect _scrollRect = null;
     [SerializeField] private Toggle _toggleReady = null;
+    [SerializeField] private Dropdown _gameSelecter = null;
 
     private bool _focusedRequested = false;     //weird unity stuff as usual ;)
     private bool _scrollRequested = false;      //weird unity stuff as usual ;)
@@ -21,6 +22,7 @@ public class LobbyView : View
     //the events you can register for
     public event Action<string> OnChatTextEntered = delegate { };
     public event Action<bool> OnReadyToggleClicked = delegate { };
+    public event Action<int> OnDropDownValueChanged = delegate { };
 
     private void Start()
     {
@@ -34,6 +36,9 @@ public class LobbyView : View
         //setup 
         _toggleReady.onValueChanged.AddListener((value) => OnReadyToggleClicked(value));
 
+        //Setup change listener on dropdown box.
+        _gameSelecter.options.Clear();
+        _gameSelecter.onValueChanged.AddListener((value) => OnDropDownValueChanged(value));
         //clear title by default
         _textHeading.text = "";
     }
@@ -85,6 +90,11 @@ public class LobbyView : View
     public void SetReadyToggle (bool pValue)
     {
         _toggleReady.SetIsOnWithoutNotify(pValue);
+    }
+
+    public void AddGameToDropdown(string pGameName)
+    {
+        _gameSelecter.options.Add(new Dropdown.OptionData() {text = pGameName});
     }
 
 }

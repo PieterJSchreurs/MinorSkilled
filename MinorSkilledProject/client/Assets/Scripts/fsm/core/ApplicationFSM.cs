@@ -114,6 +114,10 @@ public class ApplicationFSM : MonoBehaviour
 			channel.Close();
 			ChangeState(_startState.GetType());
 		}
+		if(Input.GetKeyDown(KeyCode.F2))
+		{
+			ChangeState<GameState>();
+		}
 	}
 
 	public void OnApplicationQuit()

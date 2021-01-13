@@ -136,7 +136,6 @@ namespace server
             {
                 member.SendMessage(pMessage);
             }
-
         }
 
         protected void sendChatMessage(ASerializable pMessage, TcpMessageChannel pTcpNotIncluded = null)

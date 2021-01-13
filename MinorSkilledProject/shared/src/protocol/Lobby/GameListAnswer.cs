@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using server;
+using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace shared
 {
@@ -8,15 +10,16 @@ namespace shared
 	 */
 	public class GameListAnswer : ASerializable
 	{
-		private string gameNames;
+
+		public GameTypes gameTypes;
 		public override void Serialize(Packet pPacket)
 		{
-			pPacket.Write(gameNames);
+			pPacket.Write(gameTypes);
 		}
 
 		public override void Deserialize(Packet pPacket)
 		{
-			gameNames = pPacket.ReadString();
+			gameTypes = pPacket.Read<GameTypes>();
 		}
 	}
 }

@@ -51,6 +51,7 @@ namespace server
         {
             if (pMessage is ChangeReadyStatusRequest) handleReadyNotification(pMessage as ChangeReadyStatusRequest, pSender);
             else if (pMessage is ChatMessage) handleChatMessage(pMessage as ChatMessage, pSender);
+            else if (pMessage is GameListRequest) handleGameTypes(pMessage as GameListRequest, pSender);
         }
 
         private void handleReadyNotification(ChangeReadyStatusRequest pReadyNotification, TcpMessageChannel pSender)
@@ -79,6 +80,19 @@ namespace server
             //(un)ready-ing / starting a game changes the lobby/ready count so send out an update
             //to all clients still in the lobby
             sendLobbyUpdateCount();
+        }
+
+        /// <summary>
+        /// Sends the game types to the client.
+        /// </summary>
+        /// <param name="gameListRequest"></param>
+        /// <param name="pSender"></param>
+        private void handleGameTypes(GameListRequest gameListRequest ,TcpMessageChannel pSender)
+        {
+            GameListAnswer gameListAnswer = new GameListAnswer();
+            gameListAnswer.gameTypes = new GameTypes();
+            gameListAnswer.gameTypes.gameTypes = new string[] { "TicTacToe" , "Pong" };
+            pSender.SendMessage(gameListAnswer);
         }
 
         private void handleChatMessage(ChatMessage pChatMessage, TcpMessageChannel pSender)

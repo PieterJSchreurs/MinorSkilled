@@ -7,7 +7,6 @@
 	public class GameListRequest : ASerializable
 	{
 		bool request;
-
 		public override void Serialize(Packet pPacket)
 		{
 			pPacket.Write(request);

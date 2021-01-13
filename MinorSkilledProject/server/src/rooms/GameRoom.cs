@@ -15,7 +15,6 @@ namespace server
     class GameRoom : Room
     {
         public bool IsGameInPlay { get; private set; }
-
         //wraps the board to play on...
         private TicTacToeBoard _board = new TicTacToeBoard();
         private List<TcpMessageChannel> _players = new List<TcpMessageChannel>();

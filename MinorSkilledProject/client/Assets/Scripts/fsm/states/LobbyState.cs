@@ -12,7 +12,8 @@ public class LobbyState : ApplicationStateWithView<LobbyView>
     public override void EnterState()
     {
         base.EnterState();
-
+        GameListRequest gameListRequest = new GameListRequest();
+        fsm.channel.SendMessage(gameListRequest);
         view.SetLobbyHeading("Welcome to the Lobby...");
         view.ClearOutput();
         view.AddOutput($"Server settings:"+fsm.channel.GetRemoteEndPoint());
@@ -57,6 +58,11 @@ public class LobbyState : ApplicationStateWithView<LobbyView>
         fsm.channel.SendMessage(msg);
     }
 
+    private void FillDropDown(string pName)
+    {
+        view.AddGameToDropdown(pName);
+    }
+
     private void addOutput(string pInfo)
     {
         view.AddOutput(pInfo);
@@ -76,6 +82,7 @@ public class LobbyState : ApplicationStateWithView<LobbyView>
         if (pMessage is ChatMessage) handleChatMessage(pMessage as ChatMessage);
         else if (pMessage is RoomJoinedEvent) handleRoomJoinedEvent(pMessage as RoomJoinedEvent);
         else if (pMessage is LobbyInfoUpdate) handleLobbyInfoUpdate(pMessage as LobbyInfoUpdate);
+        else if (pMessage is GameListAnswer) handleGameListAnswer(pMessage as GameListAnswer);
     }
 
     private void handleChatMessage(ChatMessage pMessage)
@@ -97,6 +104,14 @@ public class LobbyState : ApplicationStateWithView<LobbyView>
     {
         //update the lobby heading
         view.SetLobbyHeading($"Welcome to the Lobby ({pMessage.memberCount} people, {pMessage.readyCount} ready)");
+    }
+
+    private void handleGameListAnswer(GameListAnswer pMessage)
+    {
+        foreach (string pGame in pMessage.gameTypes.gameTypes)
+        {
+            FillDropDown(pGame);
+        }
     }
 
 }
