@@ -7,7 +7,7 @@ using UnityEngine;
  * 
  * Each state has access to the finite state machine (fsm) it is a part of, so it can switch state and communicate.
  */
-public abstract class ApplicationState : MonoBehaviour 
+public abstract class ApplicationState : MonoBehaviour
 {
 	//provides access to the fsm for subclasses
 	protected ApplicationFSM fsm			{ get; private set; }       

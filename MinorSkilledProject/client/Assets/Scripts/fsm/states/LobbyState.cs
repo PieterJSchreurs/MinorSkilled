@@ -1,5 +1,6 @@
 ﻿using shared;
 using UnityEngine;
+using UnityEngine.UI;
 
 /**
  * 'Chat' state while you are waiting to start a game where you can signal that you are ready or not.
@@ -21,6 +22,7 @@ public class LobbyState : ApplicationStateWithView<LobbyView>
 
         view.OnChatTextEntered += onTextEntered;
         view.OnReadyToggleClicked += onReadyToggleClicked;
+        view.OnDropDownValueChanged += OnDropDownValueChanged;
 
         if (autoQueueForGame)
         {
@@ -34,6 +36,7 @@ public class LobbyState : ApplicationStateWithView<LobbyView>
         
         view.OnChatTextEntered -= onTextEntered;
         view.OnReadyToggleClicked -= onReadyToggleClicked;
+        view.OnDropDownValueChanged -= OnDropDownValueChanged;
     }
 
     /**
@@ -56,6 +59,11 @@ public class LobbyState : ApplicationStateWithView<LobbyView>
         ChangeReadyStatusRequest msg = new ChangeReadyStatusRequest();
         msg.ready = pNewValue;
         fsm.channel.SendMessage(msg);
+    }
+
+    private void OnDropDownValueChanged(Dropdown pValue)
+    {
+        Debug.Log(pValue.value +" is selected");
     }
 
     private void FillDropDown(string pName)
