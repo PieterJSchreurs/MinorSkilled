@@ -1,0 +1,61 @@
+\hypertarget{classserver_1_1_tic_tac_toe_board}{}\doxysection{server.\+Tic\+Tac\+Toe\+Board Class Reference}
+\label{classserver_1_1_tic_tac_toe_board}\index{server.TicTacToeBoard@{server.TicTacToeBoard}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classserver_1_1_tic_tac_toe_board_a0aafe5b06902d8bd4a65d247ca76a1d7}{Make\+Move}} (int p\+Move, int p\+Player)
+\item 
+\mbox{\Hypertarget{classserver_1_1_tic_tac_toe_board_a9b4208d7d415a01dad5425b7b1932af8}\label{classserver_1_1_tic_tac_toe_board_a9b4208d7d415a01dad5425b7b1932af8}} 
+bool {\bfseries is\+Valid\+Move} (int p\+Move, int p\+Player)
+\item 
+\mbox{\Hypertarget{classserver_1_1_tic_tac_toe_board_afec033d004a45b7e55e2cc7d258bc9bb}\label{classserver_1_1_tic_tac_toe_board_afec033d004a45b7e55e2cc7d258bc9bb}} 
+int {\bfseries Get\+Current\+Player} ()
+\item 
+\mbox{\hyperlink{classshared_1_1_tic_tac_toe_board_data}{Tic\+Tac\+Toe\+Board\+Data}} \mbox{\hyperlink{classserver_1_1_tic_tac_toe_board_aec90f81f5d2fbae2eb8c921acadaa3c3}{Get\+Board\+Data}} ()
+\item 
+\mbox{\Hypertarget{classserver_1_1_tic_tac_toe_board_aa68ccf0438cb992cca146ad79ab42a35}\label{classserver_1_1_tic_tac_toe_board_aa68ccf0438cb992cca146ad79ab42a35}} 
+bool {\bfseries Has\+Won} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver_1_1_tic_tac_toe_board_a32927b8aa1c8aa244f878015c234748f}\label{classserver_1_1_tic_tac_toe_board_a32927b8aa1c8aa244f878015c234748f}} 
+\mbox{\hyperlink{classshared_1_1_tic_tac_toe_board_data}{Tic\+Tac\+Toe\+Board\+Data}} {\bfseries \+\_\+board} = new \mbox{\hyperlink{classshared_1_1_tic_tac_toe_board_data}{Tic\+Tac\+Toe\+Board\+Data}}()
+\item 
+\mbox{\Hypertarget{classserver_1_1_tic_tac_toe_board_ad88f08eecaf49971478e6be9c7c1439e}\label{classserver_1_1_tic_tac_toe_board_ad88f08eecaf49971478e6be9c7c1439e}} 
+int {\bfseries \+\_\+player\+Turn} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class wraps the actual board we are playing on.
+
+Normally both logic and data would be in a single class (e.\+g. something like Tic\+Tac\+Toe\+Model). In this case I chose to split them up\+: we have one class \mbox{\hyperlink{classserver_1_1_tic_tac_toe_board}{Tic\+Tac\+Toe\+Board}} that wraps an instance of the actual board data. This way we have an object we can serialize to clients (the board data) and one class that actually manages the logic of manipulating the board.
+
+In this specific instance that logic is almost non existent, because I tried to keep the demo as simple as possible, so we can only make a move. In an actual game, this class would implement methods such as Get\+Valid\+Moves(), Has\+Won(), Get\+Current\+Player() etc. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver_1_1_tic_tac_toe_board_aec90f81f5d2fbae2eb8c921acadaa3c3}\label{classserver_1_1_tic_tac_toe_board_aec90f81f5d2fbae2eb8c921acadaa3c3}} 
+\index{server.TicTacToeBoard@{server.TicTacToeBoard}!GetBoardData@{GetBoardData}}
+\index{GetBoardData@{GetBoardData}!server.TicTacToeBoard@{server.TicTacToeBoard}}
+\doxysubsubsection{\texorpdfstring{GetBoardData()}{GetBoardData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshared_1_1_tic_tac_toe_board_data}{Tic\+Tac\+Toe\+Board\+Data}} server.\+Tic\+Tac\+Toe\+Board.\+Get\+Board\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the inner board data state so we can send it to a client. \mbox{\Hypertarget{classserver_1_1_tic_tac_toe_board_a0aafe5b06902d8bd4a65d247ca76a1d7}\label{classserver_1_1_tic_tac_toe_board_a0aafe5b06902d8bd4a65d247ca76a1d7}} 
+\index{server.TicTacToeBoard@{server.TicTacToeBoard}!MakeMove@{MakeMove}}
+\index{MakeMove@{MakeMove}!server.TicTacToeBoard@{server.TicTacToeBoard}}
+\doxysubsubsection{\texorpdfstring{MakeMove()}{MakeMove()}}
+{\footnotesize\ttfamily void server.\+Tic\+Tac\+Toe\+Board.\+Make\+Move (\begin{DoxyParamCaption}\item[{int}]{p\+Move,  }\item[{int}]{p\+Player }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Move} & a number from 0-\/8 that indicates the cell we want to change \\
+\hline
+{\em p\+Player} & 1 or 2 to indicate which player made the move \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/server/src/Tic\+Tac\+Toe\+Board.\+cs\end{DoxyCompactItemize}

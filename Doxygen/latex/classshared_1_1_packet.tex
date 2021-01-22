@@ -1,0 +1,94 @@
+\hypertarget{classshared_1_1_packet}{}\doxysection{shared.\+Packet Class Reference}
+\label{classshared_1_1_packet}\index{shared.Packet@{shared.Packet}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classshared_1_1_packet_a0b0785aeccea7466ff8598da41481216}{Packet}} ()
+\item 
+\mbox{\hyperlink{classshared_1_1_packet_ae090c62cbb79454a6e1f5b11f8f8546a}{Packet}} (byte\mbox{[}$\,$\mbox{]} p\+Source)
+\item 
+\mbox{\Hypertarget{classshared_1_1_packet_a36702552e0b9bea18a5a66b7b50b6ba4}\label{classshared_1_1_packet_a36702552e0b9bea18a5a66b7b50b6ba4}} 
+void \mbox{\hyperlink{classshared_1_1_packet_a36702552e0b9bea18a5a66b7b50b6ba4}{Write}} (int p\+Int)
+\begin{DoxyCompactList}\small\item\em WRITE METHODS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classshared_1_1_packet_aff01858b1ba7ccb1292e0fee91c86333}\label{classshared_1_1_packet_aff01858b1ba7ccb1292e0fee91c86333}} 
+void {\bfseries Write} (string p\+String)
+\item 
+\mbox{\Hypertarget{classshared_1_1_packet_a97e149f12b6e6d19c62d555f4e3bcc6b}\label{classshared_1_1_packet_a97e149f12b6e6d19c62d555f4e3bcc6b}} 
+void {\bfseries Write} (bool p\+Bool)
+\item 
+\mbox{\Hypertarget{classshared_1_1_packet_a27a57df5fbcc71eb5f46484a1fa25e5f}\label{classshared_1_1_packet_a27a57df5fbcc71eb5f46484a1fa25e5f}} 
+void {\bfseries Write} (double p\+Float)
+\item 
+\mbox{\Hypertarget{classshared_1_1_packet_ae1bcb0ff4747ac95594b8635cb3ee47a}\label{classshared_1_1_packet_ae1bcb0ff4747ac95594b8635cb3ee47a}} 
+void {\bfseries Write} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Serializable)
+\item 
+\mbox{\Hypertarget{classshared_1_1_packet_a2b3fcf3002b662108e7f247b5d5ca64b}\label{classshared_1_1_packet_a2b3fcf3002b662108e7f247b5d5ca64b}} 
+int \mbox{\hyperlink{classshared_1_1_packet_a2b3fcf3002b662108e7f247b5d5ca64b}{Read\+Int}} ()
+\begin{DoxyCompactList}\small\item\em READ METHODS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classshared_1_1_packet_ada6f4f0eaeb836face7c8ba2d49f732e}\label{classshared_1_1_packet_ada6f4f0eaeb836face7c8ba2d49f732e}} 
+string {\bfseries Read\+String} ()
+\item 
+\mbox{\Hypertarget{classshared_1_1_packet_a35bbb9815c4b3c5fab39ea55e1539eea}\label{classshared_1_1_packet_a35bbb9815c4b3c5fab39ea55e1539eea}} 
+bool {\bfseries Read\+Bool} ()
+\item 
+\mbox{\Hypertarget{classshared_1_1_packet_a43bef87cdbd17e3e2d9c129ce6258732}\label{classshared_1_1_packet_a43bef87cdbd17e3e2d9c129ce6258732}} 
+float {\bfseries Read\+Float} ()
+\item 
+\mbox{\Hypertarget{classshared_1_1_packet_a13df30944ea6acc10fed7a80d9940511}\label{classshared_1_1_packet_a13df30944ea6acc10fed7a80d9940511}} 
+\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} {\bfseries Read\+Object} ()
+\item 
+T \mbox{\hyperlink{classshared_1_1_packet_a23238786f920c4210d338a9add5c18c9}{Read$<$ T $>$}} ()
+\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classshared_1_1_packet_ab0c5dadd7846e86ebfe2c205d58c9a1c}{Get\+Bytes}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshared_1_1_packet_a93e39a6bbc875cea5de7080ec4ae8c65}\label{classshared_1_1_packet_a93e39a6bbc875cea5de7080ec4ae8c65}} 
+Binary\+Writer {\bfseries writer}
+\item 
+\mbox{\Hypertarget{classshared_1_1_packet_a67f3aedb5a6b1ee12d9b8654d6f56dd7}\label{classshared_1_1_packet_a67f3aedb5a6b1ee12d9b8654d6f56dd7}} 
+Binary\+Reader {\bfseries reader}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classshared_1_1_packet}{Packet}} class provides a simple wrapper around an array of bytes (in the form of a Memory\+Stream), that allows us to write/read values to/from the \mbox{\hyperlink{classshared_1_1_packet}{Packet}} easily. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classshared_1_1_packet_a0b0785aeccea7466ff8598da41481216}\label{classshared_1_1_packet_a0b0785aeccea7466ff8598da41481216}} 
+\index{shared.Packet@{shared.Packet}!Packet@{Packet}}
+\index{Packet@{Packet}!shared.Packet@{shared.Packet}}
+\doxysubsubsection{\texorpdfstring{Packet()}{Packet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shared.\+Packet.\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{classshared_1_1_packet}{Packet}} for writing. \mbox{\Hypertarget{classshared_1_1_packet_ae090c62cbb79454a6e1f5b11f8f8546a}\label{classshared_1_1_packet_ae090c62cbb79454a6e1f5b11f8f8546a}} 
+\index{shared.Packet@{shared.Packet}!Packet@{Packet}}
+\index{Packet@{Packet}!shared.Packet@{shared.Packet}}
+\doxysubsubsection{\texorpdfstring{Packet()}{Packet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared.\+Packet.\+Packet (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{p\+Source }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{classshared_1_1_packet}{Packet}} from an existing byte array so we can read from it 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshared_1_1_packet_ab0c5dadd7846e86ebfe2c205d58c9a1c}\label{classshared_1_1_packet_ab0c5dadd7846e86ebfe2c205d58c9a1c}} 
+\index{shared.Packet@{shared.Packet}!GetBytes@{GetBytes}}
+\index{GetBytes@{GetBytes}!shared.Packet@{shared.Packet}}
+\doxysubsubsection{\texorpdfstring{GetBytes()}{GetBytes()}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} shared.\+Packet.\+Get\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the bytes that have been written into this \mbox{\hyperlink{classshared_1_1_packet}{Packet}}. Only works in Write mode. \mbox{\Hypertarget{classshared_1_1_packet_a23238786f920c4210d338a9add5c18c9}\label{classshared_1_1_packet_a23238786f920c4210d338a9add5c18c9}} 
+\index{shared.Packet@{shared.Packet}!Read$<$ T $>$@{Read$<$ T $>$}}
+\index{Read$<$ T $>$@{Read$<$ T $>$}!shared.Packet@{shared.Packet}}
+\doxysubsubsection{\texorpdfstring{Read$<$ T $>$()}{Read< T >()}}
+{\footnotesize\ttfamily T shared.\+Packet.\+Read$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Convenience method to read AND cast an object in one go. \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em ASerializable}]\end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/shared/src/serialization/Packet.\+cs\end{DoxyCompactItemize}

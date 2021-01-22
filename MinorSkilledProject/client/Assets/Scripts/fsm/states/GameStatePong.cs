@@ -1,6 +1,8 @@
-﻿using shared;
+﻿using server;
+using shared;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 /**
@@ -10,12 +12,18 @@ public class GameStatePong : ApplicationStateWithView<GameView>
 {
     //Game state for the live game.
     private Dictionary<int, string> players = new Dictionary<int, string>();
+    public Rigidbody2D _rigidBodyLeft;
+    public Rigidbody2D _rigidBodyRight;
+    public KeyCode moveUp = KeyCode.W;
+    public KeyCode moveDown = KeyCode.S;
+    private bool _isMoving = true;
 
     public override void EnterState()
     {
         base.EnterState();
-
         view.exitGameButton1.onClick.AddListener(OnExitButtonClick);
+        view._gamePongObject.SetActive(true);
+        view._gameTicTacToeObject.SetActive(false);
     }
 
     public override void ExitState()
@@ -26,14 +34,37 @@ public class GameStatePong : ApplicationStateWithView<GameView>
     private void Update()
     {
         receiveAndProcessNetworkMessages();
+        if (Input.GetKey(moveUp))
+        {
+            PlayerInput playerInput = new PlayerInput();
+            playerInput.playerInput = 1;
+            fsm.channel.SendMessage(playerInput);
+
+        }
+        if (Input.GetKey(moveDown))
+        {
+            PlayerInput playerInput = new PlayerInput();
+            playerInput.playerInput = 2;
+            fsm.channel.SendMessage(playerInput);
+
+        }
+        else if (Input.GetKeyUp(moveDown) || Input.GetKeyUp(moveUp))
+        {
+            PlayerInput playerInput = new PlayerInput();
+            playerInput.playerInput = 0;
+            fsm.channel.SendMessage(playerInput);
+        }
     }
+
+
+    private void FixedUpdate()
+    {
+
+    }
+
 
     protected override void handleNetworkMessage(ASerializable pMessage)
     {
-        if (pMessage is ChatMessage)
-        {
-            handleChatMessage(pMessage as ChatMessage);
-        }
         if (pMessage is NamesInGame)
         {
             handleNamesInGame(pMessage as NamesInGame);
@@ -46,12 +77,17 @@ public class GameStatePong : ApplicationStateWithView<GameView>
         {
             handleRestartGame(pMessage as RestartGame);
         }
+        if (pMessage is PlayerInputResult)
+        {
+            handlePlayerInputResult(pMessage as PlayerInputResult);
+        }
     }
 
-    //Tictactoe specific.
-    private void handleMakeMoveResult(MakeMoveResult pMakeMoveResult)
+    private void handlePlayerInputResult(PlayerInputResult pMessage)
     {
-        view.gameBoard.SetBoardData(pMakeMoveResult.boardData);
+        float[] vect = new float[4] { pMessage.vector[0], pMessage.vector[1], pMessage.vector[2], pMessage.vector[3] };       
+        _rigidBodyLeft.velocity = new Vector2(vect[0], vect[1]);
+        _rigidBodyRight.velocity = new Vector2(vect[2], vect[3]);
     }
 
     //Restart game.
@@ -59,41 +95,19 @@ public class GameStatePong : ApplicationStateWithView<GameView>
     {
         //view.gameBoard.ResetBoardData();
     }
-    //Tictactoe specific.
-    //Handles the who has won message.
-    private void handleChatMessage(ChatMessage pChatMessage)
-    {
-        view.gameMessageLabel1.text = pChatMessage.message;
-    }
-
-    //Tictactoe specific.
-    //Handles whose turn it is.
-    private void handleTurnNameSender(TurnNameSender pTurnName)
-    {
-        if (pTurnName.playerID == 0)
-        {
-            view.playerLabel1.text = $"{players[pTurnName.playerID]} it's NOT your turn.";
-            view.playerLabel2.text = $"{players[pTurnName.playerID + 1]} it's your turn.";
-        }
-        if (pTurnName.playerID == 1)
-        {
-            view.playerLabel2.text = $"{players[pTurnName.playerID]} it's NOT your turn.";
-            view.playerLabel1.text = $"{players[pTurnName.playerID - 1]} it's your turn.";
-        }
-    }
 
     //Adds people in game lobby to the Dictionary
     private void handleNamesInGame(NamesInGame pNamesInGame)
     {
         players.Add(pNamesInGame.playerID, pNamesInGame.playerName);
-        if (pNamesInGame.playerID == 0)
-        {
-            view.playerLabel1.text = $"{players[pNamesInGame.playerID]}";
-        }
-        else
-        {
-            view.playerLabel2.text = $"{players[pNamesInGame.playerID]}";
-        }
+        //if (pNamesInGame.playerID == 0)
+        //{
+        //    view.playerLabel1.text = $"{players[pNamesInGame.playerID]}";
+        //}
+        //else
+        //{
+        //    view.playerLabel2.text = $"{players[pNamesInGame.playerID]}";
+        //}
     }
 
     private void handleQuitGame(QuitGameRequest pQuitGameRequest)

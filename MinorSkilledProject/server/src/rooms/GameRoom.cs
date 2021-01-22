@@ -1,6 +1,7 @@
 ﻿using shared;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace server
@@ -17,6 +18,7 @@ namespace server
         public bool IsGameInPlay { get; private set; }
         //wraps the board to play on...
         private TicTacToeBoard _board = new TicTacToeBoard();
+        private PongData _pongData = new PongData();
         private List<TcpMessageChannel> _players = new List<TcpMessageChannel>();
         private TCPGameServer _gameServer;
         private bool _gameOver = false;
@@ -31,7 +33,7 @@ namespace server
         {
             if (IsGameInPlay) throw new Exception("Programmer error duuuude.");
             if (_gameAborted)
-            { _board = new TicTacToeBoard(); _gameAborted = false; }
+            { _board = new TicTacToeBoard(); _gameAborted = false; _pongData = new PongData(); }
 
             _players.Add(pPlayer1);
             _players.Add(pPlayer2);
@@ -89,7 +91,30 @@ namespace server
             else if (pMessage is QuitGameRequest)
             {
                 handleQuitRequest(pMessage as QuitGameRequest, pSender);
+            } else if(pMessage is PlayerInput)
+            {
+                handlePlayerInput(pMessage as PlayerInput, pSender);
             }
+        }
+
+        private void handlePlayerInput(PlayerInput pPlayerInput, TcpMessageChannel pSender)
+        {
+            Log.LogInfo("Sending :" , this);
+            _pongData.PlayerInput(pPlayerInput.playerInput, _players.IndexOf(pSender));
+            PlayerInputResult playerInputResult = new PlayerInputResult();
+            playerInputResult.whoMadeTheMove = _players.IndexOf(pSender);
+            if (playerInputResult.whoMadeTheMove == 0)
+            {
+                playerInputResult.vector[0] = _pongData.paddleLeftVelocity[0];
+                playerInputResult.vector[1] = _pongData.paddleLeftVelocity[1];
+            } else
+            {
+                playerInputResult.vector[2] = _pongData.paddleRightVelocity[0];
+                playerInputResult.vector[3] = _pongData.paddleRightVelocity[1];
+            }
+            //playerInputResult.pongData = _pongBoard.GetBoardData();
+            sendToAll(playerInputResult);
+            
         }
 
         /// <summary>
@@ -102,15 +127,15 @@ namespace server
         {
             _players.Remove(pSender);
             removeMember(pSender);
-            this.IsGameInPlay = false;
             _server.GetLobbyRoom().AddMember(pSender);
             _gameAborted = true;
             //Remove game 
             if(_players.Count <= 0)
             {
+                this.IsGameInPlay = false;
                 _server.RemoveGameRoom(this);
+               
             }
-          
         }
 
         private void handleMakeMoveRequest(MakeMoveRequest pMessage, TcpMessageChannel pSender)
@@ -142,6 +167,11 @@ namespace server
                         sendToAll(msg);
                         _gameOver = true;
                     }
+                } else
+                {
+                    ChatMessage msg = new ChatMessage();
+                    msg.message = ("Invalid move");
+                    sendChatMessage(msg, _players[_board.GetCurrentPlayer()]);
                 }
             }
         }

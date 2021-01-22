@@ -1,0 +1,80 @@
+\hypertarget{class_game_state_pong}{}\doxysection{Game\+State\+Pong Class Reference}
+\label{class_game_state_pong}\index{GameStatePong@{GameStatePong}}
+Inheritance diagram for Game\+State\+Pong\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_state_pong}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_state_pong_a008401480bd30eae8429372463a21c24}\label{class_game_state_pong_a008401480bd30eae8429372463a21c24}} 
+override void {\bfseries Enter\+State} ()
+\item 
+\mbox{\Hypertarget{class_game_state_pong_a67a1dcf6c663bc589bfa859b46196f08}\label{class_game_state_pong_a67a1dcf6c663bc589bfa859b46196f08}} 
+override void {\bfseries Exit\+State} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_state_pong_ae80fbf1259ebb8c480db7c2971f991fa}\label{class_game_state_pong_ae80fbf1259ebb8c480db7c2971f991fa}} 
+Rigidbody2D {\bfseries \+\_\+rigid\+Body\+Left}
+\item 
+\mbox{\Hypertarget{class_game_state_pong_ae9a9c500a9a8c36a2893e15e399b0139}\label{class_game_state_pong_ae9a9c500a9a8c36a2893e15e399b0139}} 
+Rigidbody2D {\bfseries \+\_\+rigid\+Body\+Right}
+\item 
+\mbox{\Hypertarget{class_game_state_pong_ab48f14744bb0254dfafaf0e6ef83907f}\label{class_game_state_pong_ab48f14744bb0254dfafaf0e6ef83907f}} 
+Key\+Code {\bfseries move\+Up} = Key\+Code.\+W
+\item 
+\mbox{\Hypertarget{class_game_state_pong_aee5aeab3c69c7c1c7675c03d8925b383}\label{class_game_state_pong_aee5aeab3c69c7c1c7675c03d8925b383}} 
+Key\+Code {\bfseries move\+Down} = Key\+Code.\+S
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_state_pong_a18d7701ed41bdef10c626c960847a065}\label{class_game_state_pong_a18d7701ed41bdef10c626c960847a065}} 
+override void {\bfseries handle\+Network\+Message} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_state_pong_a010f195e946952f98001c586f7e037b6}\label{class_game_state_pong_a010f195e946952f98001c586f7e037b6}} 
+void {\bfseries Update} ()
+\item 
+\mbox{\Hypertarget{class_game_state_pong_a9fb2fa0cf376ea961c71011e57c60b00}\label{class_game_state_pong_a9fb2fa0cf376ea961c71011e57c60b00}} 
+void {\bfseries Fixed\+Update} ()
+\item 
+\mbox{\Hypertarget{class_game_state_pong_a98e5914a831c8b6fc06147aed359f6ee}\label{class_game_state_pong_a98e5914a831c8b6fc06147aed359f6ee}} 
+void {\bfseries handle\+Player\+Input\+Result} (\mbox{\hyperlink{classshared_1_1_player_input_result}{Player\+Input\+Result}} p\+Message)
+\item 
+\mbox{\Hypertarget{class_game_state_pong_a67bac7a76cca1393dba89d7d56e69cd0}\label{class_game_state_pong_a67bac7a76cca1393dba89d7d56e69cd0}} 
+void {\bfseries handle\+Restart\+Game} (\mbox{\hyperlink{classshared_1_1_restart_game}{Restart\+Game}} p\+Restart\+Game)
+\item 
+\mbox{\Hypertarget{class_game_state_pong_ac7c48f2fa3069920c60424179b2948b1}\label{class_game_state_pong_ac7c48f2fa3069920c60424179b2948b1}} 
+void {\bfseries handle\+Names\+In\+Game} (\mbox{\hyperlink{classshared_1_1_names_in_game}{Names\+In\+Game}} p\+Names\+In\+Game)
+\item 
+\mbox{\Hypertarget{class_game_state_pong_a92d6e473a7240359239e9ab16cc3711c}\label{class_game_state_pong_a92d6e473a7240359239e9ab16cc3711c}} 
+void {\bfseries handle\+Quit\+Game} (\mbox{\hyperlink{classshared_1_1_quit_game_request}{Quit\+Game\+Request}} p\+Quit\+Game\+Request)
+\item 
+\mbox{\Hypertarget{class_game_state_pong_a51ca721786b8fe8915dc23125e64f8ce}\label{class_game_state_pong_a51ca721786b8fe8915dc23125e64f8ce}} 
+void {\bfseries On\+Exit\+Button\+Click} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_state_pong_abafbe07075702635276c4dc90a08490a}\label{class_game_state_pong_abafbe07075702635276c4dc90a08490a}} 
+Dictionary$<$ int, string $>$ {\bfseries players} = new Dictionary$<$int, string$>$()
+\item 
+\mbox{\Hypertarget{class_game_state_pong_adb5ad05a23abb87ada41e9ef639f16c6}\label{class_game_state_pong_adb5ad05a23abb87ada41e9ef639f16c6}} 
+bool {\bfseries \+\_\+is\+Moving} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is where we \textquotesingle{}play\textquotesingle{} a game. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/client/\+Assets/\+Scripts/fsm/states/Game\+State\+Pong.\+cs\end{DoxyCompactItemize}

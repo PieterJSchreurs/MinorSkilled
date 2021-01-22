@@ -1,0 +1,95 @@
+\hypertarget{class_application_f_s_m}{}\doxysection{Application\+FSM Class Reference}
+\label{class_application_f_s_m}\index{ApplicationFSM@{ApplicationFSM}}
+Inheritance diagram for Application\+FSM\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_application_f_s_m}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_application_f_s_m_a2b14d442891a7628095fb3738b1cef5a}{Change\+State$<$ T $>$}} ()
+\item 
+void \mbox{\hyperlink{class_application_f_s_m_a4e1f6a8157fdb9825304fb094a978c35}{Change\+State}} (Type p\+Type)
+\item 
+\mbox{\Hypertarget{class_application_f_s_m_abf879109609a2efb10e66c2a5cde7d96}\label{class_application_f_s_m_abf879109609a2efb10e66c2a5cde7d96}} 
+void {\bfseries Update} ()
+\item 
+\mbox{\Hypertarget{class_application_f_s_m_a338470cf3eeb267d617d96ccd33ba625}\label{class_application_f_s_m_a338470cf3eeb267d617d96ccd33ba625}} 
+void {\bfseries On\+Application\+Quit} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_application_f_s_m_aacf92417d832050bba97c95a2672b32f}\label{class_application_f_s_m_aacf92417d832050bba97c95a2672b32f}} 
+void {\bfseries Awake} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_application_f_s_m_a459369021b432180d254e1489479cfb9}\label{class_application_f_s_m_a459369021b432180d254e1489479cfb9}} 
+\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} {\bfseries channel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_application_f_s_m_a5954c67fce825d8c6706e9b93a19a198}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_application_f_s_m_a488eefcf0b97669fa39e15987dde09b1}\label{class_application_f_s_m_a488eefcf0b97669fa39e15987dde09b1}} 
+Dictionary$<$ Type, \mbox{\hyperlink{class_application_state}{Application\+State}} $>$ {\bfseries \+\_\+state\+Map} = new Dictionary$<$Type, \mbox{\hyperlink{class_application_state}{Application\+State}}$>$()
+\item 
+\mbox{\Hypertarget{class_application_f_s_m_ad2177a8ba9e84b29bcbc32173a84c3a5}\label{class_application_f_s_m_ad2177a8ba9e84b29bcbc32173a84c3a5}} 
+\mbox{\hyperlink{class_application_state}{Application\+State}} {\bfseries \+\_\+current\+State} = null
+\item 
+\mbox{\Hypertarget{class_application_f_s_m_a2550d63a570bfcba98eb178f606362df}\label{class_application_f_s_m_a2550d63a570bfcba98eb178f606362df}} 
+\mbox{\hyperlink{class_application_state}{Application\+State}} {\bfseries \+\_\+start\+State} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class implements a basic finite state machine, in other words a state switching mechanism.
+
+States are implemented through child game objects that have a subclass of the abstract \mbox{\hyperlink{class_application_state}{Application\+State}} script attached to it (, for example \mbox{\hyperlink{class_login_state}{Login\+State}}, \mbox{\hyperlink{class_lobby_state}{Lobby\+State}}, etc), and can be switched on/off (just like any other gameobject).
+
+On startup, the parent object with this \mbox{\hyperlink{class_application_f_s_m}{Application\+FSM}} script on it, \textquotesingle{}collects\textquotesingle{} all those child objects, turns them off, and then enables just the starting state (which can be set in the Inspector).
+
+Each state has Enter\+State, (Update) and Exit\+State methods and access to the \mbox{\hyperlink{class_application_f_s_m}{Application\+FSM}} itself through which it can retrieve a reference to the main Tcp\+Message\+Channel and switch to another state.
+
+The advantage of this approach is that each separate piece of functionality goes into its own state, and each state can have its own set of active gameobjects if required (by making them a child of the state gameobject).
+
+In a \textquotesingle{}real\textquotesingle{} codebase this \mbox{\hyperlink{class_application_f_s_m}{Application\+FSM}} would have been filled with generics to make it reusable for other purposes as well, but in this application it is very assignment specific. That said, it would be better to split the FSM part from the \textquotesingle{}I am a client class\textquotesingle{} part, but I will leave that as an exercise to the reader (if your interested let me know and I can show you how that would work).
+
+Anyhow the code is actually shorter than the explanation ;). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_application_f_s_m_a4e1f6a8157fdb9825304fb094a978c35}\label{class_application_f_s_m_a4e1f6a8157fdb9825304fb094a978c35}} 
+\index{ApplicationFSM@{ApplicationFSM}!ChangeState@{ChangeState}}
+\index{ChangeState@{ChangeState}!ApplicationFSM@{ApplicationFSM}}
+\doxysubsubsection{\texorpdfstring{ChangeState()}{ChangeState()}}
+{\footnotesize\ttfamily void Application\+FSM.\+Change\+State (\begin{DoxyParamCaption}\item[{Type}]{p\+Type }\end{DoxyParamCaption})}
+
+Search for a child instance which matches the requested state type, Enter it and Exit all others. \mbox{\Hypertarget{class_application_f_s_m_a2b14d442891a7628095fb3738b1cef5a}\label{class_application_f_s_m_a2b14d442891a7628095fb3738b1cef5a}} 
+\index{ApplicationFSM@{ApplicationFSM}!ChangeState$<$ T $>$@{ChangeState$<$ T $>$}}
+\index{ChangeState$<$ T $>$@{ChangeState$<$ T $>$}!ApplicationFSM@{ApplicationFSM}}
+\doxysubsubsection{\texorpdfstring{ChangeState$<$ T $>$()}{ChangeState< T >()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_application_f_s_m_a4e1f6a8157fdb9825304fb094a978c35}{Application\+FSM.\+Change\+State}}$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Search for a child instance which matches the requested state class, Enter it and Exit all others. \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em \mbox{\hyperlink{class_application_state}{Application\+State}}}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_application_f_s_m_a5954c67fce825d8c6706e9b93a19a198}\label{class_application_f_s_m_a5954c67fce825d8c6706e9b93a19a198}} 
+\index{ApplicationFSM@{ApplicationFSM}!Start@{Start}}
+\index{Start@{Start}!ApplicationFSM@{ApplicationFSM}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Application\+FSM.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Change state to which state object was specified in the Inspector. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/client/\+Assets/\+Scripts/fsm/core/Application\+FSM.\+cs\end{DoxyCompactItemize}

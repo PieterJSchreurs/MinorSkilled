@@ -118,6 +118,10 @@ public class ApplicationFSM : MonoBehaviour
 		{
 			ChangeState<GameState>();
 		}
+		if(Input.GetKeyDown(KeyCode.F3))
+		{
+			ChangeState<GameStatePong>();
+		}
 	}
 
 	public void OnApplicationQuit()

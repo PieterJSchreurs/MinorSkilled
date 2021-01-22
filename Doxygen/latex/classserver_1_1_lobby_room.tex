@@ -1,0 +1,103 @@
+\hypertarget{classserver_1_1_lobby_room}{}\doxysection{server.\+Lobby\+Room Class Reference}
+\label{classserver_1_1_lobby_room}\index{server.LobbyRoom@{server.LobbyRoom}}
+Inheritance diagram for server.\+Lobby\+Room\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classserver_1_1_lobby_room}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver_1_1_lobby_room_a6399ff0039f755993267d2b189710718}\label{classserver_1_1_lobby_room_a6399ff0039f755993267d2b189710718}} 
+{\bfseries Lobby\+Room} (\mbox{\hyperlink{classserver_1_1_t_c_p_game_server}{TCPGame\+Server}} p\+Owner)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver_1_1_lobby_room_a16d3ed0c9563fd6ea92deb88413cf58e}\label{classserver_1_1_lobby_room_a16d3ed0c9563fd6ea92deb88413cf58e}} 
+override void {\bfseries add\+Member} (\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Member)
+\item 
+override void \mbox{\hyperlink{classserver_1_1_lobby_room_a62503952835864430c5c55adab388aa4}{remove\+Member}} (\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Member)
+\item 
+\mbox{\Hypertarget{classserver_1_1_lobby_room_a1cf3a9aee55557d4f3445df5332726d0}\label{classserver_1_1_lobby_room_a1cf3a9aee55557d4f3445df5332726d0}} 
+override void {\bfseries handle\+Network\+Message} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classserver_1_1_lobby_room_a2fbcd97f96c33d2775b2caaefd667067}{handle\+Ready\+Notification}} (\mbox{\hyperlink{classshared_1_1_change_ready_status_request}{Change\+Ready\+Status\+Request}} p\+Ready\+Notification, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
+\begin{DoxyCompactList}\small\item\em Handles the setting ready of the player and sending them to the rooms. TO-\/\+DO\+: Handle the individuals not queuing for the same game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver_1_1_lobby_room_aefdd7f1b38eea01f054709552b1a1588}{handle\+Game\+Types}} (\mbox{\hyperlink{classshared_1_1_game_list_request}{Game\+List\+Request}} game\+List\+Request, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
+\begin{DoxyCompactList}\small\item\em Sends the game types to the client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classserver_1_1_lobby_room_ae07d4ecd01bc9312274ad97c321d0861}\label{classserver_1_1_lobby_room_ae07d4ecd01bc9312274ad97c321d0861}} 
+void {\bfseries handle\+Chat\+Message} (\mbox{\hyperlink{classshared_1_1_chat_message}{Chat\+Message}} p\+Chat\+Message, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
+\item 
+\mbox{\Hypertarget{classserver_1_1_lobby_room_ab5eee565110340d50f1d08bfd5f471f6}\label{classserver_1_1_lobby_room_ab5eee565110340d50f1d08bfd5f471f6}} 
+void {\bfseries send\+Lobby\+Update\+Count} ()
+\item 
+\mbox{\Hypertarget{classserver_1_1_lobby_room_a7121a7f797bdd59d781d11e5fdcd0455}\label{classserver_1_1_lobby_room_a7121a7f797bdd59d781d11e5fdcd0455}} 
+void {\bfseries Restart\+Game} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver_1_1_lobby_room_accadde385870839ba3df2953dc1f0687}\label{classserver_1_1_lobby_room_accadde385870839ba3df2953dc1f0687}} 
+List$<$ \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} $>$ {\bfseries \+\_\+ready\+Members} = new List$<$\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classserver_1_1_lobby_room}{Lobby\+Room}} is a little bit more extensive than the \mbox{\hyperlink{classserver_1_1_login_room}{Login\+Room}}. In this room clients change their \textquotesingle{}ready status\textquotesingle{}. If enough people are ready, they are automatically moved to the \mbox{\hyperlink{classserver_1_1_game_room}{Game\+Room}} to play a Game (assuming a game is not already in play). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver_1_1_lobby_room_aefdd7f1b38eea01f054709552b1a1588}\label{classserver_1_1_lobby_room_aefdd7f1b38eea01f054709552b1a1588}} 
+\index{server.LobbyRoom@{server.LobbyRoom}!handleGameTypes@{handleGameTypes}}
+\index{handleGameTypes@{handleGameTypes}!server.LobbyRoom@{server.LobbyRoom}}
+\doxysubsubsection{\texorpdfstring{handleGameTypes()}{handleGameTypes()}}
+{\footnotesize\ttfamily void server.\+Lobby\+Room.\+handle\+Game\+Types (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_game_list_request}{Game\+List\+Request}}}]{game\+List\+Request,  }\item[{\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}}}]{p\+Sender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sends the game types to the client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+List\+Request} & \\
+\hline
+{\em p\+Sender} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver_1_1_lobby_room_a2fbcd97f96c33d2775b2caaefd667067}\label{classserver_1_1_lobby_room_a2fbcd97f96c33d2775b2caaefd667067}} 
+\index{server.LobbyRoom@{server.LobbyRoom}!handleReadyNotification@{handleReadyNotification}}
+\index{handleReadyNotification@{handleReadyNotification}!server.LobbyRoom@{server.LobbyRoom}}
+\doxysubsubsection{\texorpdfstring{handleReadyNotification()}{handleReadyNotification()}}
+{\footnotesize\ttfamily void server.\+Lobby\+Room.\+handle\+Ready\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_change_ready_status_request}{Change\+Ready\+Status\+Request}}}]{p\+Ready\+Notification,  }\item[{\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}}}]{p\+Sender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handles the setting ready of the player and sending them to the rooms. TO-\/\+DO\+: Handle the individuals not queuing for the same game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Ready\+Notification} & \\
+\hline
+{\em p\+Sender} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver_1_1_lobby_room_a62503952835864430c5c55adab388aa4}\label{classserver_1_1_lobby_room_a62503952835864430c5c55adab388aa4}} 
+\index{server.LobbyRoom@{server.LobbyRoom}!removeMember@{removeMember}}
+\index{removeMember@{removeMember}!server.LobbyRoom@{server.LobbyRoom}}
+\doxysubsubsection{\texorpdfstring{removeMember()}{removeMember()}}
+{\footnotesize\ttfamily override void server.\+Lobby\+Room.\+remove\+Member (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}}}]{p\+Member }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Override remove\+Member so that our ready count and lobby count is updated (and sent to all clients) anytime we remove a member. 
+
+Reimplemented from \mbox{\hyperlink{classserver_1_1_room}{server.\+Room}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/server/src/rooms/Lobby\+Room.\+cs\end{DoxyCompactItemize}

@@ -58,6 +58,7 @@ public class LobbyState : ApplicationStateWithView<LobbyView>
     {
         ChangeReadyStatusRequest msg = new ChangeReadyStatusRequest();
         msg.ready = pNewValue;
+        msg.gameSelected = view._gameSelecter.value;
         fsm.channel.SendMessage(msg);
     }
 
@@ -104,7 +105,15 @@ public class LobbyState : ApplicationStateWithView<LobbyView>
         //did we move to the game room?
         if (pMessage.room == RoomJoinedEvent.Room.GAME_ROOM)
         {
-            fsm.ChangeState<GameState>();
+            if(view._gameSelecter.value == 0)
+            {
+                fsm.ChangeState<GameState>();
+            } 
+            if (view._gameSelecter.value == 1)
+            {
+                fsm.ChangeState<GameStatePong>();
+            }
+            
         }
     }
 

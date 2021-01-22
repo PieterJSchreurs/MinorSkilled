@@ -1,0 +1,91 @@
+\hypertarget{class_lobby_view}{}\doxysection{Lobby\+View Class Reference}
+\label{class_lobby_view}\index{LobbyView@{LobbyView}}
+Inheritance diagram for Lobby\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_lobby_view}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lobby_view_a4014201a66761f2cef04574c55e73c6d}\label{class_lobby_view_a4014201a66761f2cef04574c55e73c6d}} 
+void {\bfseries Set\+Lobby\+Heading} (string p\+Heading)
+\item 
+\mbox{\Hypertarget{class_lobby_view_ac2cc75199955c9f8e5d1d82a5d11afd0}\label{class_lobby_view_ac2cc75199955c9f8e5d1d82a5d11afd0}} 
+void {\bfseries Add\+Output} (string p\+Output)
+\item 
+\mbox{\Hypertarget{class_lobby_view_a6919b6e639449077b88f32518c164e01}\label{class_lobby_view_a6919b6e639449077b88f32518c164e01}} 
+void {\bfseries Clear\+Output} ()
+\item 
+\mbox{\Hypertarget{class_lobby_view_ab259b48b96efa83d3374e1fd9b5a3afb}\label{class_lobby_view_ab259b48b96efa83d3374e1fd9b5a3afb}} 
+void {\bfseries Clear\+Input} ()
+\item 
+\mbox{\Hypertarget{class_lobby_view_a6ed0a5cafe747e3566c2e92048f8883c}\label{class_lobby_view_a6ed0a5cafe747e3566c2e92048f8883c}} 
+void {\bfseries Set\+Ready\+Toggle} (bool p\+Value)
+\item 
+\mbox{\Hypertarget{class_lobby_view_a9a503c12afc806671624ca58bc11712a}\label{class_lobby_view_a9a503c12afc806671624ca58bc11712a}} 
+void {\bfseries Add\+Game\+To\+Dropdown} (string p\+Game\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lobby_view_a631b1cf920a31680d5a9eeaede8c6223}\label{class_lobby_view_a631b1cf920a31680d5a9eeaede8c6223}} 
+Dropdown {\bfseries \+\_\+game\+Selecter} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lobby_view_ac50aff41599ef6b19b034c792d511c04}\label{class_lobby_view_ac50aff41599ef6b19b034c792d511c04}} 
+Action$<$ string $>$ {\bfseries On\+Chat\+Text\+Entered} = delegate \{ \}
+\item 
+\mbox{\Hypertarget{class_lobby_view_a2909959a0bc178f64f94f3c553f4488d}\label{class_lobby_view_a2909959a0bc178f64f94f3c553f4488d}} 
+Action$<$ bool $>$ {\bfseries On\+Ready\+Toggle\+Clicked} = delegate \{ \}
+\item 
+\mbox{\Hypertarget{class_lobby_view_a53bf349edff44692f9df20af86c32cd6}\label{class_lobby_view_a53bf349edff44692f9df20af86c32cd6}} 
+Action$<$ Dropdown $>$ {\bfseries On\+Drop\+Down\+Value\+Changed} = delegate \{ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lobby_view_a1f75bac2e80f77880e4b3b39b70a6d0e}\label{class_lobby_view_a1f75bac2e80f77880e4b3b39b70a6d0e}} 
+void {\bfseries Start} ()
+\item 
+\mbox{\Hypertarget{class_lobby_view_a299c2d64d51a860d916c966037a18c2b}\label{class_lobby_view_a299c2d64d51a860d916c966037a18c2b}} 
+void {\bfseries Update} ()
+\item 
+\mbox{\Hypertarget{class_lobby_view_a756e03986f9c4db421dcb8e3c4da8412}\label{class_lobby_view_a756e03986f9c4db421dcb8e3c4da8412}} 
+void {\bfseries check\+Focus} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lobby_view_ab22d49ef9336c3451ec88831bda69ab3}\label{class_lobby_view_ab22d49ef9336c3451ec88831bda69ab3}} 
+TMP\+\_\+\+Text {\bfseries \+\_\+text\+Heading} = null
+\item 
+\mbox{\Hypertarget{class_lobby_view_a3032f6f93e8b2ab80710935cdbfb6205}\label{class_lobby_view_a3032f6f93e8b2ab80710935cdbfb6205}} 
+Input\+Field {\bfseries \+\_\+input\+Field\+Chat} = null
+\item 
+\mbox{\Hypertarget{class_lobby_view_a9f7d90a62a7d08ec2280bb6147bf67e9}\label{class_lobby_view_a9f7d90a62a7d08ec2280bb6147bf67e9}} 
+Text {\bfseries \+\_\+text\+Output} = null
+\item 
+\mbox{\Hypertarget{class_lobby_view_a035f7145a522ed7354e26324fb29a39e}\label{class_lobby_view_a035f7145a522ed7354e26324fb29a39e}} 
+Scroll\+Rect {\bfseries \+\_\+scroll\+Rect} = null
+\item 
+\mbox{\Hypertarget{class_lobby_view_afed5545bc26fd223041c9a7e4cc8185c}\label{class_lobby_view_afed5545bc26fd223041c9a7e4cc8185c}} 
+Toggle {\bfseries \+\_\+toggle\+Ready} = null
+\item 
+\mbox{\Hypertarget{class_lobby_view_a73a639aae9e331314e907d2275cc3a2a}\label{class_lobby_view_a73a639aae9e331314e907d2275cc3a2a}} 
+bool {\bfseries \+\_\+focused\+Requested} = false
+\item 
+\mbox{\Hypertarget{class_lobby_view_adf91862aba0c67a4cd70a9b27e136537}\label{class_lobby_view_adf91862aba0c67a4cd70a9b27e136537}} 
+bool {\bfseries \+\_\+scroll\+Requested} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wraps all elements and functionality required for the \mbox{\hyperlink{class_lobby_view}{Lobby\+View}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/client/\+Assets/\+Scripts/fsm/views/Lobby\+View.\+cs\end{DoxyCompactItemize}

@@ -8,11 +8,6 @@ using UnityEngine.EventSystems;
  */
 public class GameState : ApplicationStateWithView<GameView>
 {
-    //just for fun we keep track of how many times a player clicked the board
-    //note that in the current application you have no idea whether you are player 1 or 2
-    //normally it would be better to maintain this sort of info on the server if it is actually important information
-    private int player1MoveCount = 0;
-    private int player2MoveCount = 0;
     private Dictionary<int, string> players = new Dictionary<int, string>();
 
     public override void EnterState()
@@ -21,6 +16,8 @@ public class GameState : ApplicationStateWithView<GameView>
 
         view.gameBoard.OnCellClicked += _onCellClicked;
         view.exitGameButton1.onClick.AddListener(OnExitButtonClick);
+        view._gamePongObject.SetActive(false);
+        view._gameTicTacToeObject.SetActive(true);
     }
 
     private void _onCellClicked(int pCellIndex)

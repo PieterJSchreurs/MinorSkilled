@@ -144,7 +144,6 @@ namespace server
             msg.message = _server.GetPlayerInfo(pTcpNotIncluded).userName + " : " + msg.message;
             foreach (TcpMessageChannel member in _members)
             {
-
                 member.SendMessage(msg);
             }
         }

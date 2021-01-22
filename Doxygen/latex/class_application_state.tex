@@ -1,0 +1,89 @@
+\hypertarget{class_application_state}{}\doxysection{Application\+State Class Reference}
+\label{class_application_state}\index{ApplicationState@{ApplicationState}}
+Inheritance diagram for Application\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_application_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_application_state_a9a20f361cd142c11ef08ad1c5520cbd1}{Initialize}} (\mbox{\hyperlink{class_application_f_s_m}{Application\+FSM}} p\+Application\+FSM)
+\item 
+virtual void \mbox{\hyperlink{class_application_state_a13e0da3ce64b0f4f2dfa0bd343a844f0}{Enter\+State}} ()
+\item 
+virtual void \mbox{\hyperlink{class_application_state_af110fb619fee054d9e38d2d25068817e}{Exit\+State}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_application_state_a4f85121225f53d37de37075a4218a709}{receive\+And\+Process\+Network\+Messages}} ()
+\item 
+abstract void \mbox{\hyperlink{class_application_state_a81882c534d6c69f3f101eae8bfd0d65b}{handle\+Network\+Message}} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_application_state_a17dee56f430d20545149c099549fb964}\label{class_application_state_a17dee56f430d20545149c099549fb964}} 
+\mbox{\hyperlink{class_application_f_s_m}{Application\+FSM}} {\bfseries fsm}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the base class for any \mbox{\hyperlink{class_application_state}{Application\+State}}. You can subclass it to implement a specific application state (e.\+g. logging in, in the lobby, playing a game, etc).
+
+Each state has access to the finite state machine (fsm) it is a part of, so it can switch state and communicate. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_application_state_a13e0da3ce64b0f4f2dfa0bd343a844f0}\label{class_application_state_a13e0da3ce64b0f4f2dfa0bd343a844f0}} 
+\index{ApplicationState@{ApplicationState}!EnterState@{EnterState}}
+\index{EnterState@{EnterState}!ApplicationState@{ApplicationState}}
+\doxysubsubsection{\texorpdfstring{EnterState()}{EnterState()}}
+{\footnotesize\ttfamily virtual void Application\+State.\+Enter\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Tells this state to enable itself. 
+
+Reimplemented in \mbox{\hyperlink{class_application_state_with_view_a4917e986f8f71dad5f0c96238b31f664}{Application\+State\+With\+View$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_application_state_af110fb619fee054d9e38d2d25068817e}\label{class_application_state_af110fb619fee054d9e38d2d25068817e}} 
+\index{ApplicationState@{ApplicationState}!ExitState@{ExitState}}
+\index{ExitState@{ExitState}!ApplicationState@{ApplicationState}}
+\doxysubsubsection{\texorpdfstring{ExitState()}{ExitState()}}
+{\footnotesize\ttfamily virtual void Application\+State.\+Exit\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Tells this state to disable itself. 
+
+Reimplemented in \mbox{\hyperlink{class_application_state_with_view_a18f63a3c48b8cb0bc1be5f0f64e583df}{Application\+State\+With\+View$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_application_state_a81882c534d6c69f3f101eae8bfd0d65b}\label{class_application_state_a81882c534d6c69f3f101eae8bfd0d65b}} 
+\index{ApplicationState@{ApplicationState}!handleNetworkMessage@{handleNetworkMessage}}
+\index{handleNetworkMessage@{handleNetworkMessage}!ApplicationState@{ApplicationState}}
+\doxysubsubsection{\texorpdfstring{handleNetworkMessage()}{handleNetworkMessage()}}
+{\footnotesize\ttfamily abstract void Application\+State.\+handle\+Network\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}}}]{p\+Message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Override/implement in a subclass \mbox{\Hypertarget{class_application_state_a9a20f361cd142c11ef08ad1c5520cbd1}\label{class_application_state_a9a20f361cd142c11ef08ad1c5520cbd1}} 
+\index{ApplicationState@{ApplicationState}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!ApplicationState@{ApplicationState}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual void Application\+State.\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_application_f_s_m}{Application\+FSM}}}]{p\+Application\+FSM }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Provide a handle to the FSM to this state. 
+
+Reimplemented in \mbox{\hyperlink{class_application_state_with_view_a6f3adb05ad7f7ac8f079d050f90f9fa8}{Application\+State\+With\+View$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_application_state_a4f85121225f53d37de37075a4218a709}\label{class_application_state_a4f85121225f53d37de37075a4218a709}} 
+\index{ApplicationState@{ApplicationState}!receiveAndProcessNetworkMessages@{receiveAndProcessNetworkMessages}}
+\index{receiveAndProcessNetworkMessages@{receiveAndProcessNetworkMessages}!ApplicationState@{ApplicationState}}
+\doxysubsubsection{\texorpdfstring{receiveAndProcessNetworkMessages()}{receiveAndProcessNetworkMessages()}}
+{\footnotesize\ttfamily virtual void Application\+State.\+receive\+And\+Process\+Network\+Messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Receives all messages from the server and calls the ABSTRACT handle\+Network\+Message.
+
+This method needs to be called EXPLICITLY (for example in the Update loop), whenever you are able/ready to receive and process network messages.
+
+Implement handle\+Network\+Message in your subclass to actually handle the received message. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/client/\+Assets/\+Scripts/fsm/core/Application\+State.\+cs\end{DoxyCompactItemize}

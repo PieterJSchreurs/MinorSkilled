@@ -12,9 +12,8 @@ namespace server
     {
         //this list keeps tracks of which players are ready to play a game, this is a subset of the people in this room
         private List<TcpMessageChannel> _readyMembers = new List<TcpMessageChannel>();
-
         public LobbyRoom(TCPGameServer pOwner) : base(pOwner)
-        {
+        { 
         }
 
         protected override void addMember(TcpMessageChannel pMember)
@@ -54,6 +53,12 @@ namespace server
             else if (pMessage is GameListRequest) handleGameTypes(pMessage as GameListRequest, pSender);
         }
 
+        /// <summary>
+        /// Handles the setting ready of the player and sending them to the rooms.
+        /// TO-DO: Handle the individuals not queuing for the same game.
+        /// </summary>
+        /// <param name="pReadyNotification"></param>
+        /// <param name="pSender"></param>
         private void handleReadyNotification(ChangeReadyStatusRequest pReadyNotification, TcpMessageChannel pSender)
         {
             //if the given client was not marked as ready yet, mark the client as ready

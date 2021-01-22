@@ -14,10 +14,10 @@ public class LobbyView : View
     [SerializeField] private Text _textOutput = null;
     [SerializeField] private ScrollRect _scrollRect = null;
     [SerializeField] private Toggle _toggleReady = null;
-    [SerializeField] private Dropdown _gameSelecter = null;
-    [SerializeField] private GameObject _pongUI = null;
-    [SerializeField] private GameObject _pongPlayingField = null;
-    [SerializeField] private GameObject _tictactoeUI = null;
+    [SerializeField] public Dropdown _gameSelecter = null;
+    //[SerializeField] private GameObject _pongUI = null;
+    //[SerializeField] private GameObject _pongPlayingField = null;
+    //[SerializeField] private GameObject _tictactoeUI = null;
 
 
     private bool _focusedRequested = false;     //weird unity stuff as usual ;)

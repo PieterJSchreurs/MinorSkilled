@@ -36,7 +36,7 @@ namespace server
         private int _gameCounter = 0;
 
         //stores additional info for a player
-        private Dictionary<TcpMessageChannel, PlayerInfo> _playerInfo = new Dictionary<TcpMessageChannel, PlayerInfo>();
+        private Dictionary<TcpMessageChannel, PlayerInfo> _playerInfo = new Dictionary<TcpMessageChannel, PlayerInfo>();        
 
         private TCPGameServer()
         {

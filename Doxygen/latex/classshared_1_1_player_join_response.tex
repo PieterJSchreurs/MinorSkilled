@@ -1,0 +1,39 @@
+\hypertarget{classshared_1_1_player_join_response}{}\doxysection{shared.\+Player\+Join\+Response Class Reference}
+\label{classshared_1_1_player_join_response}\index{shared.PlayerJoinResponse@{shared.PlayerJoinResponse}}
+Inheritance diagram for shared.\+Player\+Join\+Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classshared_1_1_player_join_response}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshared_1_1_player_join_response_a0fd29f06ed66f99d71ee4b494f3cbbca}\label{classshared_1_1_player_join_response_a0fd29f06ed66f99d71ee4b494f3cbbca}} 
+enum class {\bfseries Request\+Result} \{ {\bfseries ACCEPTED}
+, {\bfseries DENIED}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshared_1_1_player_join_response_a99d98198c40b1ad7850d42628089a48d}\label{classshared_1_1_player_join_response_a99d98198c40b1ad7850d42628089a48d}} 
+override void {\bfseries Serialize} (\mbox{\hyperlink{classshared_1_1_packet}{Packet}} p\+Packet)
+\item 
+\mbox{\Hypertarget{classshared_1_1_player_join_response_a08e12e26e7cb5614a9bba0861038514f}\label{classshared_1_1_player_join_response_a08e12e26e7cb5614a9bba0861038514f}} 
+override void {\bfseries Deserialize} (\mbox{\hyperlink{classshared_1_1_packet}{Packet}} p\+Packet)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshared_1_1_player_join_response_a77059fba243743d85476b46eb07b9951}\label{classshared_1_1_player_join_response_a77059fba243743d85476b46eb07b9951}} 
+Request\+Result {\bfseries result}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Send from SERVER to CLIENT to let the client know whether it was allowed to join or not. Currently the only possible result is accepted. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/shared/src/protocol/\+Login/Player\+Join\+Response.\+cs\end{DoxyCompactItemize}

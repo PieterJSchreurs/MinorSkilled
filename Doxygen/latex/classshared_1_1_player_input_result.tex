@@ -1,0 +1,34 @@
+\hypertarget{classshared_1_1_player_input_result}{}\doxysection{shared.\+Player\+Input\+Result Class Reference}
+\label{classshared_1_1_player_input_result}\index{shared.PlayerInputResult@{shared.PlayerInputResult}}
+Inheritance diagram for shared.\+Player\+Input\+Result\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classshared_1_1_player_input_result}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshared_1_1_player_input_result_a88161637a8f630248e1419d369744023}\label{classshared_1_1_player_input_result_a88161637a8f630248e1419d369744023}} 
+override void {\bfseries Serialize} (\mbox{\hyperlink{classshared_1_1_packet}{Packet}} p\+Packet)
+\item 
+\mbox{\Hypertarget{classshared_1_1_player_input_result_a4a7282d3ed5b5ca1bc984a87cae286b2}\label{classshared_1_1_player_input_result_a4a7282d3ed5b5ca1bc984a87cae286b2}} 
+override void {\bfseries Deserialize} (\mbox{\hyperlink{classshared_1_1_packet}{Packet}} p\+Packet)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshared_1_1_player_input_result_a3e772384f0d4efb783eafb5ead286ab2}\label{classshared_1_1_player_input_result_a3e772384f0d4efb783eafb5ead286ab2}} 
+int {\bfseries who\+Made\+The\+Move} = 0
+\item 
+\mbox{\Hypertarget{classshared_1_1_player_input_result_a515dde9604f85824fd99892c21cf02df}\label{classshared_1_1_player_input_result_a515dde9604f85824fd99892c21cf02df}} 
+float\mbox{[}$\,$\mbox{]} {\bfseries vector} = new float\mbox{[}4\mbox{]} \{ 0, 0, 0, 0 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Send from CLIENT to SERVER to indicate the move the client would like to make. Since the board is just an array of cells, move is a simple index. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/shared/src/protocol/\+Game/\+Realtime\+Game/Player\+Input\+Result.\+cs\end{DoxyCompactItemize}

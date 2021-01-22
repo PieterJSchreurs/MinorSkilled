@@ -17,5 +17,9 @@ public class GameView : View
     public TMP_Text gameMessageLabel1 => _gameMessageLabel;
     [SerializeField] private Button _exitGameButton = null;
     public Button exitGameButton1 => _exitGameButton;
+    [SerializeField] private GameObject _gameTicTactoe = null;
+    public GameObject _gameTicTacToeObject => _gameTicTactoe;
+    [SerializeField] private GameObject _gamePong = null;
+    public GameObject _gamePongObject => _gamePong;
 }
 

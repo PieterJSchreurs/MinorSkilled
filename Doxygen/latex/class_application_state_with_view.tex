@@ -1,0 +1,87 @@
+\hypertarget{class_application_state_with_view}{}\doxysection{Application\+State\+With\+View$<$ T $>$ Class Template Reference}
+\label{class_application_state_with_view}\index{ApplicationStateWithView$<$ T $>$@{ApplicationStateWithView$<$ T $>$}}
+Inheritance diagram for Application\+State\+With\+View$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_application_state_with_view}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_application_state_with_view_a6f3adb05ad7f7ac8f079d050f90f9fa8}{Initialize}} (\mbox{\hyperlink{class_application_f_s_m}{Application\+FSM}} p\+Application\+FSM)
+\item 
+override void \mbox{\hyperlink{class_application_state_with_view_a4917e986f8f71dad5f0c96238b31f664}{Enter\+State}} ()
+\item 
+override void \mbox{\hyperlink{class_application_state_with_view_a18f63a3c48b8cb0bc1be5f0f64e583df}{Exit\+State}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_application_state_with_view_a664ab322befb21fb4cd6cd9622d89afa}\label{class_application_state_with_view_a664ab322befb21fb4cd6cd9622d89afa}} 
+T {\bfseries view}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_application_state_with_view_a2e3d3c26ccbae72d453443d50477828d}\label{class_application_state_with_view_a2e3d3c26ccbae72d453443d50477828d}} 
+T {\bfseries \+\_\+view} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+To keep this application \textquotesingle{}simple\textquotesingle{} we are not using a UIManager (which could also be an FSM), instead an application state can be connected directly to piece of the UI, which we enable/disable as this state becomes active/inactive.
+
+I added this indirection so that every state subclass has direct access to a Typed view and we cannot connect the wrong view to it in the Inspector.
+
+All this class does, it enabling that view connection and managing it.
+
+Why not put this directly in Application\+State$<$\+T$>$? Mainly because generics are a b....tch to store in dictionaries.
+
+In short advantages of this approach\+:
+\begin{DoxyItemize}
+\item After doing something like Game\+State$<$\+Game\+View$>$ all you can connect to the \mbox{\hyperlink{class_game_state}{Game\+State}} in the Inspector IS a \mbox{\hyperlink{class_game_view}{Game\+View}}
+\item \mbox{\hyperlink{class_game_state}{Game\+State}} has access to a typed \mbox{\hyperlink{class_game_view}{Game\+View}} without any casting. 
+\end{DoxyItemize}\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em \mbox{\hyperlink{class_view}{View}}}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_application_state_with_view_a4917e986f8f71dad5f0c96238b31f664}\label{class_application_state_with_view_a4917e986f8f71dad5f0c96238b31f664}} 
+\index{ApplicationStateWithView$<$ T $>$@{ApplicationStateWithView$<$ T $>$}!EnterState@{EnterState}}
+\index{EnterState@{EnterState}!ApplicationStateWithView$<$ T $>$@{ApplicationStateWithView$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{EnterState()}{EnterState()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_application_state_with_view}{Application\+State\+With\+View}}$<$ T $>$.Enter\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Tells this state to enable itself. 
+
+Reimplemented from \mbox{\hyperlink{class_application_state_a13e0da3ce64b0f4f2dfa0bd343a844f0}{Application\+State}}.
+
+\mbox{\Hypertarget{class_application_state_with_view_a18f63a3c48b8cb0bc1be5f0f64e583df}\label{class_application_state_with_view_a18f63a3c48b8cb0bc1be5f0f64e583df}} 
+\index{ApplicationStateWithView$<$ T $>$@{ApplicationStateWithView$<$ T $>$}!ExitState@{ExitState}}
+\index{ExitState@{ExitState}!ApplicationStateWithView$<$ T $>$@{ApplicationStateWithView$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ExitState()}{ExitState()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_application_state_with_view}{Application\+State\+With\+View}}$<$ T $>$.Exit\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Tells this state to disable itself. 
+
+Reimplemented from \mbox{\hyperlink{class_application_state_af110fb619fee054d9e38d2d25068817e}{Application\+State}}.
+
+\mbox{\Hypertarget{class_application_state_with_view_a6f3adb05ad7f7ac8f079d050f90f9fa8}\label{class_application_state_with_view_a6f3adb05ad7f7ac8f079d050f90f9fa8}} 
+\index{ApplicationStateWithView$<$ T $>$@{ApplicationStateWithView$<$ T $>$}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!ApplicationStateWithView$<$ T $>$@{ApplicationStateWithView$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_application_state_with_view}{Application\+State\+With\+View}}$<$ T $>$.Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_application_f_s_m}{Application\+FSM}}}]{p\+Application\+FSM }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Provide a handle to the FSM to this state. 
+
+Reimplemented from \mbox{\hyperlink{class_application_state_a9a20f361cd142c11ef08ad1c5520cbd1}{Application\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/client/\+Assets/\+Scripts/fsm/core/Application\+State\+With\+View.\+cs\end{DoxyCompactItemize}

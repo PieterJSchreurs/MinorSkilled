@@ -1,0 +1,132 @@
+\hypertarget{classshared_1_1_tcp_message_channel}{}\doxysection{shared.\+Tcp\+Message\+Channel Class Reference}
+\label{classshared_1_1_tcp_message_channel}\index{shared.TcpMessageChannel@{shared.TcpMessageChannel}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classshared_1_1_tcp_message_channel_a6350f863e80dcff375f2f8988dfef091}{Tcp\+Message\+Channel}} (Tcp\+Client p\+Tcp\+Client)
+\item 
+\mbox{\hyperlink{classshared_1_1_tcp_message_channel_abe47a89be421d0e908793061340cd2f3}{Tcp\+Message\+Channel}} ()
+\item 
+bool \mbox{\hyperlink{classshared_1_1_tcp_message_channel_a2f00e0b861f6e42c9c91167ef8eac396}{Connect}} (string p\+Server\+IP, int p\+Server\+Port)
+\item 
+void \mbox{\hyperlink{classshared_1_1_tcp_message_channel_ad25dd02ec1a35c553898d0569ce5d8b1}{Send\+Message}} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message)
+\item 
+bool \mbox{\hyperlink{classshared_1_1_tcp_message_channel_a6068031ace8149cd1dc2d9ddafc3e31e}{Has\+Message}} ()
+\item 
+\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} \mbox{\hyperlink{classshared_1_1_tcp_message_channel_a3e87f83927bff9ac373d3c3c086ef9be}{Receive\+Message}} ()
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_ad339cf0aad9c8030de4fcdbc250f6e0f}\label{classshared_1_1_tcp_message_channel_ad339cf0aad9c8030de4fcdbc250f6e0f}} 
+bool {\bfseries Has\+Errors} ()
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_a559b5ef3fa101dc0510c3d9cc677a6ec}\label{classshared_1_1_tcp_message_channel_a559b5ef3fa101dc0510c3d9cc677a6ec}} 
+List$<$ Exception $>$ {\bfseries Get\+Errors} ()
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_aef0dd5c68b15adfb20164302805a863c}\label{classshared_1_1_tcp_message_channel_aef0dd5c68b15adfb20164302805a863c}} 
+IPEnd\+Point {\bfseries Get\+Remote\+End\+Point} ()
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_ac86cd5129e02675f2686876e9506d45a}\label{classshared_1_1_tcp_message_channel_ac86cd5129e02675f2686876e9506d45a}} 
+void {\bfseries Close} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classshared_1_1_tcp_message_channel_aa737ff5a1ebde7328908d6286cccd56b}{Connected}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_ac14de59ed52f60f0988e89d909c1aa3e}\label{classshared_1_1_tcp_message_channel_ac14de59ed52f60f0988e89d909c1aa3e}} 
+void {\bfseries add\+Error} (Exception p\+Error)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_a26fed4c58042c07e019dc95fae657387}\label{classshared_1_1_tcp_message_channel_a26fed4c58042c07e019dc95fae657387}} 
+Tcp\+Client {\bfseries \+\_\+client} = null
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_a4e5c2e8872161154ac695b960d341abf}\label{classshared_1_1_tcp_message_channel_a4e5c2e8872161154ac695b960d341abf}} 
+Network\+Stream {\bfseries \+\_\+stream} = null
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_a497b905ef38f448ec65e0894317f852d}\label{classshared_1_1_tcp_message_channel_a497b905ef38f448ec65e0894317f852d}} 
+IPEnd\+Point {\bfseries \+\_\+remote\+End\+Point} = null
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_a5141d69a7baac8dfd6f31d9baef45956}\label{classshared_1_1_tcp_message_channel_a5141d69a7baac8dfd6f31d9baef45956}} 
+List$<$ Exception $>$ {\bfseries \+\_\+errors} = new List$<$Exception$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_afee8dee006672bbd142df2862f65e1ae}\label{classshared_1_1_tcp_message_channel_afee8dee006672bbd142df2862f65e1ae}} 
+static \mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} {\bfseries \+\_\+last\+Serialized\+Message} = null
+\item 
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_af497cd61cd445fb4133580848ee74efd}\label{classshared_1_1_tcp_message_channel_af497cd61cd445fb4133580848ee74efd}} 
+static byte\mbox{[}$\,$\mbox{]} {\bfseries \+\_\+last\+Serialized\+Bytes} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} is sort of a facade around a Tcp\+Client, Packets \& the Stream\+Util class. It abstracts communication to a single bidirectional channel which you can use to pass \mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} objects back and forth, and check to see whether everything is still peachy where the underlying connection is concerned.
+
+Basically after the initial setup, \textquotesingle{}all\textquotesingle{} you have to worry about is having a channel and being able to push objects through it.
+
+If you want to implement your own serialization mechanism, this is the place to do it. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_a6350f863e80dcff375f2f8988dfef091}\label{classshared_1_1_tcp_message_channel_a6350f863e80dcff375f2f8988dfef091}} 
+\index{shared.TcpMessageChannel@{shared.TcpMessageChannel}!TcpMessageChannel@{TcpMessageChannel}}
+\index{TcpMessageChannel@{TcpMessageChannel}!shared.TcpMessageChannel@{shared.TcpMessageChannel}}
+\doxysubsubsection{\texorpdfstring{TcpMessageChannel()}{TcpMessageChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shared.\+Tcp\+Message\+Channel.\+Tcp\+Message\+Channel (\begin{DoxyParamCaption}\item[{Tcp\+Client}]{p\+Tcp\+Client }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} based on an existing (and connected) Tcp\+Client. This is usually used on the server side after accepting a Tcp\+Client from a Tcp\+Listener. \mbox{\Hypertarget{classshared_1_1_tcp_message_channel_abe47a89be421d0e908793061340cd2f3}\label{classshared_1_1_tcp_message_channel_abe47a89be421d0e908793061340cd2f3}} 
+\index{shared.TcpMessageChannel@{shared.TcpMessageChannel}!TcpMessageChannel@{TcpMessageChannel}}
+\index{TcpMessageChannel@{TcpMessageChannel}!shared.TcpMessageChannel@{shared.TcpMessageChannel}}
+\doxysubsubsection{\texorpdfstring{TcpMessageChannel()}{TcpMessageChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared.\+Tcp\+Message\+Channel.\+Tcp\+Message\+Channel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} which doesn\textquotesingle{}t have an underlying connected Tcp\+Client yet. This is usually used on the client side, where you call Connect (..,..) on the \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} after creating it. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_a2f00e0b861f6e42c9c91167ef8eac396}\label{classshared_1_1_tcp_message_channel_a2f00e0b861f6e42c9c91167ef8eac396}} 
+\index{shared.TcpMessageChannel@{shared.TcpMessageChannel}!Connect@{Connect}}
+\index{Connect@{Connect}!shared.TcpMessageChannel@{shared.TcpMessageChannel}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily bool shared.\+Tcp\+Message\+Channel.\+Connect (\begin{DoxyParamCaption}\item[{string}]{p\+Server\+IP,  }\item[{int}]{p\+Server\+Port }\end{DoxyParamCaption})}
+
+Try to (re)connect to the given server and port (blocks until connected or failed).
+
+\begin{DoxyReturn}{Returns}
+bool indicating connection status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_a6068031ace8149cd1dc2d9ddafc3e31e}\label{classshared_1_1_tcp_message_channel_a6068031ace8149cd1dc2d9ddafc3e31e}} 
+\index{shared.TcpMessageChannel@{shared.TcpMessageChannel}!HasMessage@{HasMessage}}
+\index{HasMessage@{HasMessage}!shared.TcpMessageChannel@{shared.TcpMessageChannel}}
+\doxysubsubsection{\texorpdfstring{HasMessage()}{HasMessage()}}
+{\footnotesize\ttfamily bool shared.\+Tcp\+Message\+Channel.\+Has\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Is there a message pending? \mbox{\Hypertarget{classshared_1_1_tcp_message_channel_a3e87f83927bff9ac373d3c3c086ef9be}\label{classshared_1_1_tcp_message_channel_a3e87f83927bff9ac373d3c3c086ef9be}} 
+\index{shared.TcpMessageChannel@{shared.TcpMessageChannel}!ReceiveMessage@{ReceiveMessage}}
+\index{ReceiveMessage@{ReceiveMessage}!shared.TcpMessageChannel@{shared.TcpMessageChannel}}
+\doxysubsubsection{\texorpdfstring{ReceiveMessage()}{ReceiveMessage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} shared.\+Tcp\+Message\+Channel.\+Receive\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Block until a complete message is read over the underlying\textquotesingle{}s Tcp\+Client\textquotesingle{}s Net\+Stream. If you don\textquotesingle{}t want to block, check Has\+Message first(). \mbox{\Hypertarget{classshared_1_1_tcp_message_channel_ad25dd02ec1a35c553898d0569ce5d8b1}\label{classshared_1_1_tcp_message_channel_ad25dd02ec1a35c553898d0569ce5d8b1}} 
+\index{shared.TcpMessageChannel@{shared.TcpMessageChannel}!SendMessage@{SendMessage}}
+\index{SendMessage@{SendMessage}!shared.TcpMessageChannel@{shared.TcpMessageChannel}}
+\doxysubsubsection{\texorpdfstring{SendMessage()}{SendMessage()}}
+{\footnotesize\ttfamily void shared.\+Tcp\+Message\+Channel.\+Send\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}}}]{p\+Message }\end{DoxyParamCaption})}
+
+Send the given message through the underlying Tcp\+Client\textquotesingle{}s Net\+Stream. 
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classshared_1_1_tcp_message_channel_aa737ff5a1ebde7328908d6286cccd56b}\label{classshared_1_1_tcp_message_channel_aa737ff5a1ebde7328908d6286cccd56b}} 
+\index{shared.TcpMessageChannel@{shared.TcpMessageChannel}!Connected@{Connected}}
+\index{Connected@{Connected}!shared.TcpMessageChannel@{shared.TcpMessageChannel}}
+\doxysubsubsection{\texorpdfstring{Connected}{Connected}}
+{\footnotesize\ttfamily bool shared.\+Tcp\+Message\+Channel.\+Connected\hspace{0.3cm}{\ttfamily [get]}}
+
+Similar to Tcp\+Client connected, but also returns false if underlying client is null, or errors were detected. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/shared/src/serialization/Tcp\+Message\+Channel.\+cs\end{DoxyCompactItemize}
