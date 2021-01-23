@@ -23,6 +23,7 @@ namespace server
         private TCPGameServer _gameServer;
         private bool _gameOver = false;
         private bool _gameAborted = false;
+        private int counter = 0;
 
         public GameRoom(TCPGameServer pOwner) : base(pOwner)
         {
@@ -57,7 +58,7 @@ namespace server
         {
             //Resets the board.
         }
-       
+
         private void sendPeopleInGame()
         {
             foreach (TcpMessageChannel pPlayer in _players)
@@ -91,7 +92,8 @@ namespace server
             else if (pMessage is QuitGameRequest)
             {
                 handleQuitRequest(pMessage as QuitGameRequest, pSender);
-            } else if(pMessage is PlayerInput)
+            }
+            else if (pMessage is PlayerInput)
             {
                 handlePlayerInput(pMessage as PlayerInput, pSender);
             }
@@ -99,22 +101,14 @@ namespace server
 
         private void handlePlayerInput(PlayerInput pPlayerInput, TcpMessageChannel pSender)
         {
-            Log.LogInfo("Sending :" , this);
+            counter++;
+            Log.LogInfo("Sending : " + counter, this);
             _pongData.PlayerInput(pPlayerInput.playerInput, _players.IndexOf(pSender));
             PlayerInputResult playerInputResult = new PlayerInputResult();
             playerInputResult.whoMadeTheMove = _players.IndexOf(pSender);
-            if (playerInputResult.whoMadeTheMove == 0)
-            {
-                playerInputResult.vector[0] = _pongData.paddleLeftVelocity[0];
-                playerInputResult.vector[1] = _pongData.paddleLeftVelocity[1];
-            } else
-            {
-                playerInputResult.vector[2] = _pongData.paddleRightVelocity[0];
-                playerInputResult.vector[3] = _pongData.paddleRightVelocity[1];
-            }
+            playerInputResult._data = _pongData;
             //playerInputResult.pongData = _pongBoard.GetBoardData();
             sendToAll(playerInputResult);
-            
         }
 
         /// <summary>
@@ -130,11 +124,11 @@ namespace server
             _server.GetLobbyRoom().AddMember(pSender);
             _gameAborted = true;
             //Remove game 
-            if(_players.Count <= 0)
+            if (_players.Count <= 0)
             {
                 this.IsGameInPlay = false;
                 _server.RemoveGameRoom(this);
-               
+
             }
         }
 
@@ -167,7 +161,8 @@ namespace server
                         sendToAll(msg);
                         _gameOver = true;
                     }
-                } else
+                }
+                else
                 {
                     ChatMessage msg = new ChatMessage();
                     msg.message = ("Invalid move");

@@ -6,9 +6,13 @@ namespace shared
     
     public class PongData : ASerializable
     {
-        public float[] paddleLeftVelocity = new float[2];
-        public float[] paddleRightVelocity = new float[2];
-        //public float[] ballVelocity = new float[3];
+        /// <summary>
+        /// Default state positions.
+        /// </summary>
+        public float[] paddleLeftPos = new float[2] { -5, 0 };
+        public float[] paddleRightPos = new float[2] { 5, 0 };
+        public float[] ballVelocity = new float[2] { 0, 0 };
+        private float _edge = 2.25f;
 
         public void PlayerInput(int pInput, int pPlayer)
         {
@@ -17,55 +21,59 @@ namespace shared
             {
                 if (pInput == 1)
                 {
-                    paddleLeftVelocity = new float[2] { 0, 10 };
+                    paddleLeftPos = new float[2] { paddleLeftPos[0] + 0, paddleLeftPos[1] + 0.05f };
                 }
                 else if (pInput == 2)
                 {
-                    paddleLeftVelocity = new float[2] { 0, -10 };
+                    paddleLeftPos = new float[2] { paddleLeftPos[0] + 0, paddleLeftPos[1] -0.05f };
                 }
                 else
                 {
-                    paddleLeftVelocity = new float[2] { 0, 0 };
+                    paddleLeftPos = new float[2] { paddleLeftPos[0], paddleLeftPos[1] };
                 }
+                if (paddleLeftPos[1] > _edge) paddleLeftPos[1] = _edge;
+                if (paddleLeftPos[1] < -_edge) paddleLeftPos[1] = -_edge;
             }
             if (pPlayer == 1)
             {
                 if (pInput == 1)
                 {
-                    paddleRightVelocity = new float[2] { 0, 10 };
+                    paddleRightPos = new float[2] { paddleRightPos[0] + 0, paddleRightPos[1] + 0.05f };
                 }
                 else if (pInput == 2)
                 {
-                    paddleRightVelocity = new float[2] { 0, -10 };
+                    paddleRightPos = new float[2] { paddleRightPos[0] + 0, paddleRightPos[1] -0.05f };
                 }
                 else
                 {
-                    paddleRightVelocity = new float[2] { 0, 0 };
+                    paddleRightPos = new float[2] { paddleRightPos[0], paddleRightPos[1] };
                 }
+                if(paddleRightPos[1] > _edge) paddleRightPos[1] = _edge;
+                if (paddleRightPos[1] < -_edge) paddleRightPos[1] = -_edge;
             }
         }
 
         public override void Serialize(Packet pPacket)
         {
-            for (int i = 0; i < paddleLeftVelocity.Length; i++)
+            for (int i = 0; i < paddleLeftPos.Length; i++)
             {
-                pPacket.Write(paddleLeftVelocity[i]);
+                pPacket.Write(paddleLeftPos[i]);
             }
-            for (int i = 0; i < paddleRightVelocity.Length; i++)
+            for (int i = 0; i < paddleRightPos.Length; i++)
             {
-                pPacket.Write(paddleRightVelocity[i]);
+                pPacket.Write(paddleRightPos[i]);
             }
         }
 
         public override void Deserialize(Packet pPacket)
         {
-            for (int i = 0; i < paddleLeftVelocity.Length; i++)
+            for (int i = 0; i < paddleLeftPos.Length; i++)
             {
-                paddleLeftVelocity[i] = pPacket.ReadFloat();
+                paddleLeftPos[i] = pPacket.ReadFloat();
             }
-            for (int i = 0; i < paddleRightVelocity.Length; i++)
+            for (int i = 0; i < paddleRightPos.Length; i++)
             {
-                paddleRightVelocity[i] = pPacket.ReadFloat();
+                paddleRightPos[i] = pPacket.ReadFloat();
             }
         }
 

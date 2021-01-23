@@ -87,4 +87,3 @@ C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\obj\x86\D
 C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\obj\x86\Debug\shared.csproj.CopyComplete
-C:\Users\Piet\Documents\School\MinorSkilled\MinorSkilledProject\shared\obj\x86\Debug\shared.csprojAssemblyReference.cache

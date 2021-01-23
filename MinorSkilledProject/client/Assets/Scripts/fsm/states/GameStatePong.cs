@@ -59,7 +59,7 @@ public class GameStatePong : ApplicationStateWithView<GameView>
 
     private void FixedUpdate()
     {
-
+       
     }
 
 
@@ -86,8 +86,8 @@ public class GameStatePong : ApplicationStateWithView<GameView>
     private void handlePlayerInputResult(PlayerInputResult pMessage)
     {
         float[] vect = new float[4] { pMessage.vector[0], pMessage.vector[1], pMessage.vector[2], pMessage.vector[3] };       
-        _rigidBodyLeft.velocity = new Vector2(vect[0], vect[1]);
-        _rigidBodyRight.velocity = new Vector2(vect[2], vect[3]);
+        _rigidBodyLeft.position = new Vector2(vect[0], vect[1]);
+        _rigidBodyRight.position = new Vector2(vect[2], vect[3]);
     }
 
     //Restart game.
