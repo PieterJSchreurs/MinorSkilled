@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Minor: Class Members - Functions</title>
+<title>Minor Skilled: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,10 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Minor
-   &#160;<span id="projectnumber">1</span>
+   <div id="projectname">Minor Skilled
+   &#160;<span id="projectnumber">1.1</span>
    </div>
-   <div id="projectbrief">This is my minor</div>
   </td>
  </tr>
  </tbody>
@@ -65,6 +64,16 @@ $(function() {
 <div class="contents">
 &#160;
 
+<h3><a id="index_a"></a>- a -</h3><ul>
+<li>AddGameToDropdown()
+: <a class="el" href="class_lobby_view.html#a9a503c12afc806671624ca58bc11712a">LobbyView</a>
+</li>
+<li>AddOutput()
+: <a class="el" href="class_lobby_view.html#ac2cc75199955c9f8e5d1d82a5d11afd0">LobbyView</a>
+</li>
+</ul>
+
+
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>ChangeState()
 : <a class="el" href="class_application_f_s_m.html#a4e1f6a8157fdb9825304fb094a978c35">ApplicationFSM</a>
@@ -72,12 +81,21 @@ $(function() {
 <li>ChangeState&lt; T &gt;()
 : <a class="el" href="class_application_f_s_m.html#a2b14d442891a7628095fb3738b1cef5a">ApplicationFSM</a>
 </li>
-<li>checkFaultyMember()
-: <a class="el" href="classserver_1_1_room.html#aaae1e7235c6002836e8c757e26aee631">server.Room</a>
+<li>ClearInput()
+: <a class="el" href="class_lobby_view.html#ab259b48b96efa83d3374e1fd9b5a3afb">LobbyView</a>
+</li>
+<li>ClearOutput()
+: <a class="el" href="class_lobby_view.html#a6919b6e639449077b88f32518c164e01">LobbyView</a>
 </li>
 <li>Connect()
-: <a class="el" href="class_login_state.html#ab879184ce19cb916e447751acb138c41">LoginState</a>
-, <a class="el" href="classshared_1_1_tcp_message_channel.html#a2f00e0b861f6e42c9c91167ef8eac396">shared.TcpMessageChannel</a>
+: <a class="el" href="classshared_1_1_tcp_message_channel.html#a2f00e0b861f6e42c9c91167ef8eac396">shared.TcpMessageChannel</a>
+</li>
+</ul>
+
+
+<h3><a id="index_d"></a>- d -</h3><ul>
+<li>Deserialize()
+: <a class="el" href="classshared_1_1_pong_data.html#a430d8b6904fdbfd28e1c097e3fcba426">shared.PongData</a>
 </li>
 </ul>
 
@@ -101,6 +119,9 @@ $(function() {
 <li>GetBytes()
 : <a class="el" href="classshared_1_1_packet.html#ab0c5dadd7846e86ebfe2c205d58c9a1c">shared.Packet</a>
 </li>
+<li>getGameRoomID()
+: <a class="el" href="classserver_1_1_t_c_p_game_server.html#a519461101b1173c197f46a5dfe43e161">server.TCPGameServer</a>
+</li>
 <li>GetPlayerInfo()
 : <a class="el" href="classserver_1_1_t_c_p_game_server.html#a4a27af49a5bd8fe49ec722407d350778">server.TCPGameServer</a>
 </li>
@@ -108,20 +129,10 @@ $(function() {
 
 
 <h3><a id="index_h"></a>- h -</h3><ul>
-<li>handleGameTypes()
-: <a class="el" href="classserver_1_1_lobby_room.html#aefdd7f1b38eea01f054709552b1a1588">server.LobbyRoom</a>
-</li>
 <li>handleNetworkMessage()
 : <a class="el" href="class_application_state.html#a81882c534d6c69f3f101eae8bfd0d65b">ApplicationState</a>
-</li>
-<li>handlePlayerJoinRequest()
-: <a class="el" href="classserver_1_1_login_room.html#a5b4d62d9d9a87d4ba6b08b4d60e72a01">server.LoginRoom</a>
-</li>
-<li>handleQuitRequest()
-: <a class="el" href="classserver_1_1_game_room.html#a360e2f210f3d076ee05f158babe39b0d">server.GameRoom</a>
-</li>
-<li>handleReadyNotification()
-: <a class="el" href="classserver_1_1_lobby_room.html#a2fbcd97f96c33d2775b2caaefd667067">server.LobbyRoom</a>
+, <a class="el" href="class_game_state_pong.html#a18d7701ed41bdef10c626c960847a065">GameStatePong</a>
+, <a class="el" href="classserver_1_1_game_room.html#a93bea95ce6feb15be499a4eba067d500">server.GameRoom</a>
 </li>
 <li>HasMessage()
 : <a class="el" href="classshared_1_1_tcp_message_channel.html#a6068031ace8149cd1dc2d9ddafc3e31e">shared.TcpMessageChannel</a>
@@ -145,11 +156,8 @@ $(function() {
 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
-<li>onReadyToggleClicked()
-: <a class="el" href="class_lobby_state.html#aeb906054012a595e190e6029701d4132">LobbyState</a>
-</li>
-<li>onTextEntered()
-: <a class="el" href="class_lobby_state.html#a77b778181b62fdd31f8d7ae37a17a3ae">LobbyState</a>
+<li>OnPointerClick()
+: <a class="el" href="class_game_board.html#a358fa8315318188146fc42051ae2fb91">GameBoard</a>
 </li>
 </ul>
 
@@ -172,9 +180,6 @@ $(function() {
 : <a class="el" href="class_application_state.html#a4f85121225f53d37de37075a4218a709">ApplicationState</a>
 , <a class="el" href="classserver_1_1_room.html#abe3e8c982bf3b0ee664be335ad6a2b31">server.Room</a>
 </li>
-<li>receiveAndProcessNetworkMessagesFromMember()
-: <a class="el" href="classserver_1_1_room.html#a897054f7ea406294d7591cb60b68e38c">server.Room</a>
-</li>
 <li>ReceiveMessage()
 : <a class="el" href="classshared_1_1_tcp_message_channel.html#a3e87f83927bff9ac373d3c3c086ef9be">shared.TcpMessageChannel</a>
 </li>
@@ -183,6 +188,9 @@ $(function() {
 </li>
 <li>removeFaultyMembers()
 : <a class="el" href="classserver_1_1_room.html#ab742004d398480fd61b31dc23105abba">server.Room</a>
+</li>
+<li>RemoveGameRoom()
+: <a class="el" href="classserver_1_1_t_c_p_game_server.html#ad3b255ed17952d43caba1475f072765f">server.TCPGameServer</a>
 </li>
 <li>removeMember()
 : <a class="el" href="classserver_1_1_lobby_room.html#a62503952835864430c5c55adab388aa4">server.LobbyRoom</a>
@@ -206,8 +214,17 @@ $(function() {
 <li>sendToAll()
 : <a class="el" href="classserver_1_1_room.html#a3b20182ceb8af3cb31995e0e12c7dd26">server.Room</a>
 </li>
-<li>Start()
-: <a class="el" href="class_application_f_s_m.html#a5954c67fce825d8c6706e9b93a19a198">ApplicationFSM</a>
+<li>Serialize()
+: <a class="el" href="classshared_1_1_pong_data.html#a0206c532825f6740c187d96dc6e1d342">shared.PongData</a>
+</li>
+<li>SetBoardData()
+: <a class="el" href="class_game_board.html#a2954899d041cd62815f97f398f8f9fa0">GameBoard</a>
+</li>
+<li>SetLobbyHeading()
+: <a class="el" href="class_lobby_view.html#a4014201a66761f2cef04574c55e73c6d">LobbyView</a>
+</li>
+<li>SetReadyToggle()
+: <a class="el" href="class_lobby_view.html#a6ed0a5cafe747e3566c2e92048f8883c">LobbyView</a>
 </li>
 </ul>
 
@@ -221,9 +238,7 @@ $(function() {
 
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>Update()
-: <a class="el" href="class_lobby_state.html#ac7fcec5047796898316fa75907f36eae">LobbyState</a>
-, <a class="el" href="class_login_state.html#ad0c42a1c5bd6d69a7776774a9f7eb766">LoginState</a>
-, <a class="el" href="classserver_1_1_game_room.html#ad3362faaa051be5cd1c61d5f3253b6ad">server.GameRoom</a>
+: <a class="el" href="classserver_1_1_game_room.html#ad3362faaa051be5cd1c61d5f3253b6ad">server.GameRoom</a>
 , <a class="el" href="classserver_1_1_room.html#a5ad00438a61a5bfca8a6d0cd9094d1ac">server.Room</a>
 </li>
 </ul>

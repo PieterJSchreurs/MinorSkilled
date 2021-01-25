@@ -9,24 +9,18 @@ Inheritance diagram for Lobby\+View\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_lobby_view_a4014201a66761f2cef04574c55e73c6d}\label{class_lobby_view_a4014201a66761f2cef04574c55e73c6d}} 
-void {\bfseries Set\+Lobby\+Heading} (string p\+Heading)
-\item 
-\mbox{\Hypertarget{class_lobby_view_ac2cc75199955c9f8e5d1d82a5d11afd0}\label{class_lobby_view_ac2cc75199955c9f8e5d1d82a5d11afd0}} 
-void {\bfseries Add\+Output} (string p\+Output)
-\item 
-\mbox{\Hypertarget{class_lobby_view_a6919b6e639449077b88f32518c164e01}\label{class_lobby_view_a6919b6e639449077b88f32518c164e01}} 
-void {\bfseries Clear\+Output} ()
-\item 
-\mbox{\Hypertarget{class_lobby_view_ab259b48b96efa83d3374e1fd9b5a3afb}\label{class_lobby_view_ab259b48b96efa83d3374e1fd9b5a3afb}} 
-void {\bfseries Clear\+Input} ()
-\item 
-\mbox{\Hypertarget{class_lobby_view_a6ed0a5cafe747e3566c2e92048f8883c}\label{class_lobby_view_a6ed0a5cafe747e3566c2e92048f8883c}} 
-void {\bfseries Set\+Ready\+Toggle} (bool p\+Value)
-\item 
-\mbox{\Hypertarget{class_lobby_view_a9a503c12afc806671624ca58bc11712a}\label{class_lobby_view_a9a503c12afc806671624ca58bc11712a}} 
-void {\bfseries Add\+Game\+To\+Dropdown} (string p\+Game\+Name)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_lobby_view_a4014201a66761f2cef04574c55e73c6d}{Set\+Lobby\+Heading}} (string p\+Heading)
+\begin{DoxyCompactList}\small\item\em Sets the title of the lobby. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lobby_view_ac2cc75199955c9f8e5d1d82a5d11afd0}{Add\+Output}} (string p\+Output)
+\begin{DoxyCompactList}\small\item\em Adds a string to the chatbox. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lobby_view_a6919b6e639449077b88f32518c164e01}{Clear\+Output}} ()
+\begin{DoxyCompactList}\small\item\em Clears the chatbox. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lobby_view_ab259b48b96efa83d3374e1fd9b5a3afb}{Clear\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Clears the chatbox input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lobby_view_a6ed0a5cafe747e3566c2e92048f8883c}{Set\+Ready\+Toggle}} (bool p\+Value)
+\begin{DoxyCompactList}\small\item\em Sets a ready toggle to on or off. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lobby_view_a9a503c12afc806671624ca58bc11712a}{Add\+Game\+To\+Dropdown}} (string p\+Game\+Name)
+\begin{DoxyCompactList}\small\item\em Adds a value to the dropdown box in the view. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -45,46 +39,93 @@ Action$<$ bool $>$ {\bfseries On\+Ready\+Toggle\+Clicked} = delegate \{ \}
 \mbox{\Hypertarget{class_lobby_view_a53bf349edff44692f9df20af86c32cd6}\label{class_lobby_view_a53bf349edff44692f9df20af86c32cd6}} 
 Action$<$ Dropdown $>$ {\bfseries On\+Drop\+Down\+Value\+Changed} = delegate \{ \}
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_lobby_view_a1f75bac2e80f77880e4b3b39b70a6d0e}\label{class_lobby_view_a1f75bac2e80f77880e4b3b39b70a6d0e}} 
-void {\bfseries Start} ()
-\item 
-\mbox{\Hypertarget{class_lobby_view_a299c2d64d51a860d916c966037a18c2b}\label{class_lobby_view_a299c2d64d51a860d916c966037a18c2b}} 
-void {\bfseries Update} ()
-\item 
-\mbox{\Hypertarget{class_lobby_view_a756e03986f9c4db421dcb8e3c4da8412}\label{class_lobby_view_a756e03986f9c4db421dcb8e3c4da8412}} 
-void {\bfseries check\+Focus} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_lobby_view_ab22d49ef9336c3451ec88831bda69ab3}\label{class_lobby_view_ab22d49ef9336c3451ec88831bda69ab3}} 
-TMP\+\_\+\+Text {\bfseries \+\_\+text\+Heading} = null
-\item 
-\mbox{\Hypertarget{class_lobby_view_a3032f6f93e8b2ab80710935cdbfb6205}\label{class_lobby_view_a3032f6f93e8b2ab80710935cdbfb6205}} 
-Input\+Field {\bfseries \+\_\+input\+Field\+Chat} = null
-\item 
-\mbox{\Hypertarget{class_lobby_view_a9f7d90a62a7d08ec2280bb6147bf67e9}\label{class_lobby_view_a9f7d90a62a7d08ec2280bb6147bf67e9}} 
-Text {\bfseries \+\_\+text\+Output} = null
-\item 
-\mbox{\Hypertarget{class_lobby_view_a035f7145a522ed7354e26324fb29a39e}\label{class_lobby_view_a035f7145a522ed7354e26324fb29a39e}} 
-Scroll\+Rect {\bfseries \+\_\+scroll\+Rect} = null
-\item 
-\mbox{\Hypertarget{class_lobby_view_afed5545bc26fd223041c9a7e4cc8185c}\label{class_lobby_view_afed5545bc26fd223041c9a7e4cc8185c}} 
-Toggle {\bfseries \+\_\+toggle\+Ready} = null
-\item 
-\mbox{\Hypertarget{class_lobby_view_a73a639aae9e331314e907d2275cc3a2a}\label{class_lobby_view_a73a639aae9e331314e907d2275cc3a2a}} 
-bool {\bfseries \+\_\+focused\+Requested} = false
-\item 
-\mbox{\Hypertarget{class_lobby_view_adf91862aba0c67a4cd70a9b27e136537}\label{class_lobby_view_adf91862aba0c67a4cd70a9b27e136537}} 
-bool {\bfseries \+\_\+scroll\+Requested} = false
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Wraps all elements and functionality required for the \mbox{\hyperlink{class_lobby_view}{Lobby\+View}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lobby_view_a9a503c12afc806671624ca58bc11712a}\label{class_lobby_view_a9a503c12afc806671624ca58bc11712a}} 
+\index{LobbyView@{LobbyView}!AddGameToDropdown@{AddGameToDropdown}}
+\index{AddGameToDropdown@{AddGameToDropdown}!LobbyView@{LobbyView}}
+\doxysubsubsection{\texorpdfstring{AddGameToDropdown()}{AddGameToDropdown()}}
+{\footnotesize\ttfamily void Lobby\+View.\+Add\+Game\+To\+Dropdown (\begin{DoxyParamCaption}\item[{string}]{p\+Game\+Name }\end{DoxyParamCaption})}
+
+
+
+Adds a value to the dropdown box in the view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Game\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lobby_view_ac2cc75199955c9f8e5d1d82a5d11afd0}\label{class_lobby_view_ac2cc75199955c9f8e5d1d82a5d11afd0}} 
+\index{LobbyView@{LobbyView}!AddOutput@{AddOutput}}
+\index{AddOutput@{AddOutput}!LobbyView@{LobbyView}}
+\doxysubsubsection{\texorpdfstring{AddOutput()}{AddOutput()}}
+{\footnotesize\ttfamily void Lobby\+View.\+Add\+Output (\begin{DoxyParamCaption}\item[{string}]{p\+Output }\end{DoxyParamCaption})}
+
+
+
+Adds a string to the chatbox. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Output} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lobby_view_ab259b48b96efa83d3374e1fd9b5a3afb}\label{class_lobby_view_ab259b48b96efa83d3374e1fd9b5a3afb}} 
+\index{LobbyView@{LobbyView}!ClearInput@{ClearInput}}
+\index{ClearInput@{ClearInput}!LobbyView@{LobbyView}}
+\doxysubsubsection{\texorpdfstring{ClearInput()}{ClearInput()}}
+{\footnotesize\ttfamily void Lobby\+View.\+Clear\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the chatbox input. 
+
+\mbox{\Hypertarget{class_lobby_view_a6919b6e639449077b88f32518c164e01}\label{class_lobby_view_a6919b6e639449077b88f32518c164e01}} 
+\index{LobbyView@{LobbyView}!ClearOutput@{ClearOutput}}
+\index{ClearOutput@{ClearOutput}!LobbyView@{LobbyView}}
+\doxysubsubsection{\texorpdfstring{ClearOutput()}{ClearOutput()}}
+{\footnotesize\ttfamily void Lobby\+View.\+Clear\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the chatbox. 
+
+\mbox{\Hypertarget{class_lobby_view_a4014201a66761f2cef04574c55e73c6d}\label{class_lobby_view_a4014201a66761f2cef04574c55e73c6d}} 
+\index{LobbyView@{LobbyView}!SetLobbyHeading@{SetLobbyHeading}}
+\index{SetLobbyHeading@{SetLobbyHeading}!LobbyView@{LobbyView}}
+\doxysubsubsection{\texorpdfstring{SetLobbyHeading()}{SetLobbyHeading()}}
+{\footnotesize\ttfamily void Lobby\+View.\+Set\+Lobby\+Heading (\begin{DoxyParamCaption}\item[{string}]{p\+Heading }\end{DoxyParamCaption})}
+
+
+
+Sets the title of the lobby. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Heading} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lobby_view_a6ed0a5cafe747e3566c2e92048f8883c}\label{class_lobby_view_a6ed0a5cafe747e3566c2e92048f8883c}} 
+\index{LobbyView@{LobbyView}!SetReadyToggle@{SetReadyToggle}}
+\index{SetReadyToggle@{SetReadyToggle}!LobbyView@{LobbyView}}
+\doxysubsubsection{\texorpdfstring{SetReadyToggle()}{SetReadyToggle()}}
+{\footnotesize\ttfamily void Lobby\+View.\+Set\+Ready\+Toggle (\begin{DoxyParamCaption}\item[{bool}]{p\+Value }\end{DoxyParamCaption})}
+
+
+
+Sets a ready toggle to on or off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Value} & \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

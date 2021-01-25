@@ -21,11 +21,11 @@ namespace shared
             {
                 if (pInput == 1)
                 {
-                    paddleLeftPos = new float[2] { paddleLeftPos[0] + 0, paddleLeftPos[1] + 0.05f };
+                    paddleLeftPos = new float[2] { paddleLeftPos[0] + 0, paddleLeftPos[1] + 0.06f };
                 }
                 else if (pInput == 2)
                 {
-                    paddleLeftPos = new float[2] { paddleLeftPos[0] + 0, paddleLeftPos[1] -0.05f };
+                    paddleLeftPos = new float[2] { paddleLeftPos[0] + 0, paddleLeftPos[1] -0.06f };
                 }
                 else
                 {
@@ -38,11 +38,11 @@ namespace shared
             {
                 if (pInput == 1)
                 {
-                    paddleRightPos = new float[2] { paddleRightPos[0] + 0, paddleRightPos[1] + 0.05f };
+                    paddleRightPos = new float[2] { paddleRightPos[0] + 0, paddleRightPos[1] + 0.06f };
                 }
                 else if (pInput == 2)
                 {
-                    paddleRightPos = new float[2] { paddleRightPos[0] + 0, paddleRightPos[1] -0.05f };
+                    paddleRightPos = new float[2] { paddleRightPos[0] + 0, paddleRightPos[1] -0.06f };
                 }
                 else
                 {
@@ -53,6 +53,10 @@ namespace shared
             }
         }
 
+        /// <summary>
+        /// Serialize the positions of the paddles.
+        /// </summary>
+        /// <param name="pPacket"></param>
         public override void Serialize(Packet pPacket)
         {
             for (int i = 0; i < paddleLeftPos.Length; i++)
@@ -65,6 +69,10 @@ namespace shared
             }
         }
 
+        /// <summary>
+        /// Deserialize the positions of the paddles.
+        /// </summary>
+        /// <param name="pPacket"></param>
         public override void Deserialize(Packet pPacket)
         {
             for (int i = 0; i < paddleLeftPos.Length; i++)
@@ -79,7 +87,7 @@ namespace shared
 
         public override string ToString()
         {
-            return GetType().Name;
+            return GetType().Name + ":" + string.Join(",", board);
         }
 
         private void resetBoardData()

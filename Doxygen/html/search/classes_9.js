@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['simpleroom_123',['SimpleRoom',['../classserver_1_1_simple_room.html',1,'server']]]
+  ['quitgamerequest_140',['QuitGameRequest',['../classshared_1_1_quit_game_request.html',1,'shared']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quitgamerequest_119',['QuitGameRequest',['../classshared_1_1_quit_game_request.html',1,'shared']]]
+  ['namesingame_131',['NamesInGame',['../classshared_1_1_names_in_game.html',1,'shared']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['makemove_41',['MakeMove',['../classserver_1_1_tic_tac_toe_board.html#a0aafe5b06902d8bd4a65d247ca76a1d7',1,'server::TicTacToeBoard']]],
-  ['makemoverequest_42',['MakeMoveRequest',['../classshared_1_1_make_move_request.html',1,'shared']]],
-  ['makemoveresult_43',['MakeMoveResult',['../classshared_1_1_make_move_result.html',1,'shared']]]
+  ['initialize_37',['Initialize',['../class_application_state.html#a9a20f361cd142c11ef08ad1c5520cbd1',1,'ApplicationState.Initialize()'],['../class_application_state_with_view.html#a6f3adb05ad7f7ac8f079d050f90f9fa8',1,'ApplicationStateWithView.Initialize()']]],
+  ['isolator_38',['Isolator',['../class_isolator.html',1,'']]],
+  ['isolator_3c_20applicationstate_20_3e_39',['Isolator&lt; ApplicationState &gt;',['../class_isolator.html',1,'']]],
+  ['isolator_3c_20view_20_3e_40',['Isolator&lt; View &gt;',['../class_isolator.html',1,'']]]
 ];

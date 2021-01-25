@@ -18,7 +18,6 @@ ScriptsOnlyBuild:
     - LoginState
     - LoginView
     - Note
-    - PlayerController
     - SideWalls
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -94,97 +93,95 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11812}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11854}
+      Script: {instanceID: 11928}
     - Class: 114
-      Script: {instanceID: 11930}
+      Script: {instanceID: 11954}
     - Class: 114
       Script: {instanceID: 11956}
     - Class: 114
-      Script: {instanceID: 11958}
+      Script: {instanceID: 11970}
     - Class: 114
-      Script: {instanceID: 11972}
+      Script: {instanceID: 11976}
     - Class: 114
-      Script: {instanceID: 11978}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 12010}
     - Class: 114
-      Script: {instanceID: 12012}
+      Script: {instanceID: 12038}
     - Class: 114
-      Script: {instanceID: 12040}
+      Script: {instanceID: 12044}
     - Class: 114
-      Script: {instanceID: 12046}
+      Script: {instanceID: 12050}
     - Class: 114
-      Script: {instanceID: 12052}
+      Script: {instanceID: 12108}
     - Class: 114
-      Script: {instanceID: 12110}
+      Script: {instanceID: 12130}
     - Class: 114
-      Script: {instanceID: 12132}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12180}
+      Script: {instanceID: 12250}
     - Class: 114
-      Script: {instanceID: 12252}
+      Script: {instanceID: 12254}
     - Class: 114
       Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 12258}
+      Script: {instanceID: 12272}
     - Class: 114
-      Script: {instanceID: 12274}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 12348}
+      Script: {instanceID: 12356}
     - Class: 114
-      Script: {instanceID: 12358}
+      Script: {instanceID: 12360}
     - Class: 114
-      Script: {instanceID: 12362}
+      Script: {instanceID: 12420}
     - Class: 114
-      Script: {instanceID: 12422}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 12504}
     - Class: 114
-      Script: {instanceID: 12506}
+      Script: {instanceID: 12628}
     - Class: 114
-      Script: {instanceID: 12630}
+      Script: {instanceID: 12652}
     - Class: 114
-      Script: {instanceID: 12654}
+      Script: {instanceID: 12716}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 12740}
+      Script: {instanceID: 12750}
     - Class: 114
-      Script: {instanceID: 12752}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 12804}
+      Script: {instanceID: 12866}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12880}
     - Class: 114
-      Script: {instanceID: 12882}
+      Script: {instanceID: 12922}
     - Class: 114
-      Script: {instanceID: 12924}
+      Script: {instanceID: 13026}
     - Class: 114
-      Script: {instanceID: 13028}
+      Script: {instanceID: 13040}
     - Class: 114
       Script: {instanceID: 13042}
     - Class: 114
-      Script: {instanceID: 13044}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 13108}
+      Script: {instanceID: 13112}
     - Class: 114
-      Script: {instanceID: 13114}
+      Script: {instanceID: 13120}
     - Class: 114
       Script: {instanceID: 13122}
     - Class: 114
-      Script: {instanceID: 13124}
+      Script: {instanceID: 13132}
     - Class: 114
-      Script: {instanceID: 13134}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 13144}
+      Script: {instanceID: 13162}
     - Class: 114
-      Script: {instanceID: 13164}
+      Script: {instanceID: 13174}
     - Class: 114
-      Script: {instanceID: 13176}
-    - Class: 114
-      Script: {instanceID: 13192}
+      Script: {instanceID: 13190}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -260,7 +257,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: eae9891bf5760f8200c545cb018ae01a
+      Hash: 1a7126ee3d740d697fb2d77199955851
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameView

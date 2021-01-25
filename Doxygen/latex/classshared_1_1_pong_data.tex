@@ -12,30 +12,78 @@ Inheritance diagram for shared.\+Pong\+Data\+:\begin{figure}[H]
 \mbox{\Hypertarget{classshared_1_1_pong_data_a3c44e48b81b9a6c6847db36cb7b28cba}\label{classshared_1_1_pong_data_a3c44e48b81b9a6c6847db36cb7b28cba}} 
 void {\bfseries Player\+Input} (int p\+Input, int p\+Player)
 \item 
-\mbox{\Hypertarget{classshared_1_1_pong_data_a0206c532825f6740c187d96dc6e1d342}\label{classshared_1_1_pong_data_a0206c532825f6740c187d96dc6e1d342}} 
-override void {\bfseries Serialize} (\mbox{\hyperlink{classshared_1_1_packet}{Packet}} p\+Packet)
-\item 
-\mbox{\Hypertarget{classshared_1_1_pong_data_a430d8b6904fdbfd28e1c097e3fcba426}\label{classshared_1_1_pong_data_a430d8b6904fdbfd28e1c097e3fcba426}} 
-override void {\bfseries Deserialize} (\mbox{\hyperlink{classshared_1_1_packet}{Packet}} p\+Packet)
-\item 
+override void \mbox{\hyperlink{classshared_1_1_pong_data_a0206c532825f6740c187d96dc6e1d342}{Serialize}} (\mbox{\hyperlink{classshared_1_1_packet}{Packet}} p\+Packet)
+\begin{DoxyCompactList}\small\item\em Serialize the positions of the paddles. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classshared_1_1_pong_data_a430d8b6904fdbfd28e1c097e3fcba426}{Deserialize}} (\mbox{\hyperlink{classshared_1_1_packet}{Packet}} p\+Packet)
+\begin{DoxyCompactList}\small\item\em Deserialize the positions of the paddles. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classshared_1_1_pong_data_a98d1652f151049b80781840f888931c0}\label{classshared_1_1_pong_data_a98d1652f151049b80781840f888931c0}} 
 override string {\bfseries To\+String} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classshared_1_1_pong_data_a94bfde921939f45282c21dd0caa916c8}\label{classshared_1_1_pong_data_a94bfde921939f45282c21dd0caa916c8}} 
-float\mbox{[}$\,$\mbox{]} {\bfseries paddle\+Left\+Velocity} = new float\mbox{[}2\mbox{]}
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classshared_1_1_pong_data_a8e1f929d2472b1ac05250a4e02800856}{paddle\+Left\+Pos}} = new float\mbox{[}2\mbox{]} \{ -\/5, 0 \}
+\begin{DoxyCompactList}\small\item\em Default state positions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classshared_1_1_pong_data_a72ce3d9c403a00d4bc91c582184fb684}\label{classshared_1_1_pong_data_a72ce3d9c403a00d4bc91c582184fb684}} 
+float\mbox{[}$\,$\mbox{]} {\bfseries paddle\+Right\+Pos} = new float\mbox{[}2\mbox{]} \{ 5, 0 \}
 \item 
-\mbox{\Hypertarget{classshared_1_1_pong_data_a55dfc34414821670a7d916be2d693c2f}\label{classshared_1_1_pong_data_a55dfc34414821670a7d916be2d693c2f}} 
-float\mbox{[}$\,$\mbox{]} {\bfseries paddle\+Right\+Velocity} = new float\mbox{[}2\mbox{]}
+\mbox{\Hypertarget{classshared_1_1_pong_data_a659039acf2c1d9b9d4df8d6926348c0c}\label{classshared_1_1_pong_data_a659039acf2c1d9b9d4df8d6926348c0c}} 
+float\mbox{[}$\,$\mbox{]} {\bfseries ball\+Velocity} = new float\mbox{[}2\mbox{]} \{ 0, 0 \}
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classshared_1_1_pong_data_aeff063f2b025cc865ff9927bb31f8ec1}\label{classshared_1_1_pong_data_aeff063f2b025cc865ff9927bb31f8ec1}} 
-void {\bfseries reset\+Board\+Data} ()
-\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshared_1_1_pong_data_a430d8b6904fdbfd28e1c097e3fcba426}\label{classshared_1_1_pong_data_a430d8b6904fdbfd28e1c097e3fcba426}} 
+\index{shared.PongData@{shared.PongData}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!shared.PongData@{shared.PongData}}
+\doxysubsubsection{\texorpdfstring{Deserialize()}{Deserialize()}}
+{\footnotesize\ttfamily override void shared.\+Pong\+Data.\+Deserialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_packet}{Packet}}}]{p\+Packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deserialize the positions of the paddles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Packet} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classshared_1_1_a_serializable}{shared.\+ASerializable}}.
+
+\mbox{\Hypertarget{classshared_1_1_pong_data_a0206c532825f6740c187d96dc6e1d342}\label{classshared_1_1_pong_data_a0206c532825f6740c187d96dc6e1d342}} 
+\index{shared.PongData@{shared.PongData}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!shared.PongData@{shared.PongData}}
+\doxysubsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily override void shared.\+Pong\+Data.\+Serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_packet}{Packet}}}]{p\+Packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Serialize the positions of the paddles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Packet} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classshared_1_1_a_serializable}{shared.\+ASerializable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classshared_1_1_pong_data_a8e1f929d2472b1ac05250a4e02800856}\label{classshared_1_1_pong_data_a8e1f929d2472b1ac05250a4e02800856}} 
+\index{shared.PongData@{shared.PongData}!paddleLeftPos@{paddleLeftPos}}
+\index{paddleLeftPos@{paddleLeftPos}!shared.PongData@{shared.PongData}}
+\doxysubsubsection{\texorpdfstring{paddleLeftPos}{paddleLeftPos}}
+{\footnotesize\ttfamily float \mbox{[}$\,$\mbox{]} shared.\+Pong\+Data.\+paddle\+Left\+Pos = new float\mbox{[}2\mbox{]} \{ -\/5, 0 \}}
+
+
+
+Default state positions. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

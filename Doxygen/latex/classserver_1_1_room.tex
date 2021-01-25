@@ -45,23 +45,10 @@ void {\bfseries send\+Chat\+Message} (\mbox{\hyperlink{classshared_1_1_a_seriali
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classserver_1_1_room_ae70f2ebe547a9d04b5fcfe13c1ca2e73}\label{classserver_1_1_room_ae70f2ebe547a9d04b5fcfe13c1ca2e73}} 
-\mbox{\hyperlink{classserver_1_1_t_c_p_game_server}{TCPGame\+Server}} {\bfseries \+\_\+server}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\mbox{\hyperlink{classserver_1_1_t_c_p_game_server}{TCPGame\+Server}} {\bfseries \+\_\+server}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \item 
 \mbox{\Hypertarget{classserver_1_1_room_adde60e22b1db9567fb7f5a05a20071da}\label{classserver_1_1_room_adde60e22b1db9567fb7f5a05a20071da}} 
 int {\bfseries member\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{classserver_1_1_room_aaae1e7235c6002836e8c757e26aee631}{check\+Faulty\+Member}} (\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Member)
-\item 
-void \mbox{\hyperlink{classserver_1_1_room_a897054f7ea406294d7591cb60b68e38c}{receive\+And\+Process\+Network\+Messages\+From\+Member}} (\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Member)
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classserver_1_1_room_a0f726e1a0d9845e6e8ab258657e18b32}\label{classserver_1_1_room_a0f726e1a0d9845e6e8ab258657e18b32}} 
-List$<$ \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} $>$ {\bfseries \+\_\+members}
 \end{DoxyCompactItemize}
 
 
@@ -87,25 +74,13 @@ Usage\+: subclass and override handle\+Network\+Message
 Create a room with an empty member list and reference to the server instance they are a part of. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classserver_1_1_room_aaae1e7235c6002836e8c757e26aee631}\label{classserver_1_1_room_aaae1e7235c6002836e8c757e26aee631}} 
-\index{server.Room@{server.Room}!checkFaultyMember@{checkFaultyMember}}
-\index{checkFaultyMember@{checkFaultyMember}!server.Room@{server.Room}}
-\doxysubsubsection{\texorpdfstring{checkFaultyMember()}{checkFaultyMember()}}
-{\footnotesize\ttfamily void server.\+Room.\+check\+Faulty\+Member (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}}}]{p\+Member }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-Check if a member is no longer connected or has issues, if so remove it from the room, and close it\textquotesingle{}s connection. \mbox{\Hypertarget{classserver_1_1_room_abe3e8c982bf3b0ee664be335ad6a2b31}\label{classserver_1_1_room_abe3e8c982bf3b0ee664be335ad6a2b31}} 
+\mbox{\Hypertarget{classserver_1_1_room_abe3e8c982bf3b0ee664be335ad6a2b31}\label{classserver_1_1_room_abe3e8c982bf3b0ee664be335ad6a2b31}} 
 \index{server.Room@{server.Room}!receiveAndProcessNetworkMessages@{receiveAndProcessNetworkMessages}}
 \index{receiveAndProcessNetworkMessages@{receiveAndProcessNetworkMessages}!server.Room@{server.Room}}
 \doxysubsubsection{\texorpdfstring{receiveAndProcessNetworkMessages()}{receiveAndProcessNetworkMessages()}}
 {\footnotesize\ttfamily void server.\+Room.\+receive\+And\+Process\+Network\+Messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Iterate over all members and get their network messages. \mbox{\Hypertarget{classserver_1_1_room_a897054f7ea406294d7591cb60b68e38c}\label{classserver_1_1_room_a897054f7ea406294d7591cb60b68e38c}} 
-\index{server.Room@{server.Room}!receiveAndProcessNetworkMessagesFromMember@{receiveAndProcessNetworkMessagesFromMember}}
-\index{receiveAndProcessNetworkMessagesFromMember@{receiveAndProcessNetworkMessagesFromMember}!server.Room@{server.Room}}
-\doxysubsubsection{\texorpdfstring{receiveAndProcessNetworkMessagesFromMember()}{receiveAndProcessNetworkMessagesFromMember()}}
-{\footnotesize\ttfamily void server.\+Room.\+receive\+And\+Process\+Network\+Messages\+From\+Member (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}}}]{p\+Member }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-Get all the messages from a specific member and process them \mbox{\Hypertarget{classserver_1_1_room_a470c377b0d71a07fa0f63cd52d02b0de}\label{classserver_1_1_room_a470c377b0d71a07fa0f63cd52d02b0de}} 
+Iterate over all members and get their network messages. \mbox{\Hypertarget{classserver_1_1_room_a470c377b0d71a07fa0f63cd52d02b0de}\label{classserver_1_1_room_a470c377b0d71a07fa0f63cd52d02b0de}} 
 \index{server.Room@{server.Room}!removeAndCloseMember@{removeAndCloseMember}}
 \index{removeAndCloseMember@{removeAndCloseMember}!server.Room@{server.Room}}
 \doxysubsubsection{\texorpdfstring{removeAndCloseMember()}{removeAndCloseMember()}}

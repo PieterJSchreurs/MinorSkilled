@@ -7,11 +7,12 @@ using System.Text;
 
 namespace shared
 {
-    /**
-     * Classes that extend ASerializable can (de)serialize themselves into/out of a Packet instance. 
-     * See the classes in the protocol package for an example. 
-     * This base class provides a ToString method for simple (and slow) debugging.
-     */
+
+    /// <summary>
+    ///Classes that extend ASerializable can (de)serialize themselves into/out of a Packet instance. 
+    ///See the classes in the protocol package for an example.
+    ///This base class provides a ToString method for simple(and slow) debugging.
+    /// </summary>
     public abstract class ASerializable
     {
         abstract public void Serialize(Packet pPacket);

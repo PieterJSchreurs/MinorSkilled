@@ -1,0 +1,47 @@
+\hypertarget{class_game_board}{}\doxysection{Game\+Board Class Reference}
+\label{class_game_board}\index{GameBoard@{GameBoard}}
+Inheritance diagram for Game\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_board}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_board_a2954899d041cd62815f97f398f8f9fa0}{Set\+Board\+Data}} (\mbox{\hyperlink{classshared_1_1_tic_tac_toe_board_data}{Tic\+Tac\+Toe\+Board\+Data}} p\+Board\+Data)
+\item 
+\mbox{\Hypertarget{class_game_board_a25e60811f7b334f2a8bb1e2a0e98a34a}\label{class_game_board_a25e60811f7b334f2a8bb1e2a0e98a34a}} 
+void {\bfseries Reset\+Board\+Data} ()
+\item 
+void \mbox{\hyperlink{class_game_board_a358fa8315318188146fc42051ae2fb91}{On\+Pointer\+Click}} (Pointer\+Event\+Data event\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_board_a0fc968c4eb0440b425906c3bf31436fd}\label{class_game_board_a0fc968c4eb0440b425906c3bf31436fd}} 
+Action$<$ int $>$ {\bfseries On\+Cell\+Clicked} = delegate \{ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple checkerbased gameboard that could be reused for other 1 piece based 2 player games. (For multi piece based 2 player games, you\textquotesingle{}ll probably have to make some edits, but to avoid even more code clutter I didn\textquotesingle{}t go that far). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_board_a358fa8315318188146fc42051ae2fb91}\label{class_game_board_a358fa8315318188146fc42051ae2fb91}} 
+\index{GameBoard@{GameBoard}!OnPointerClick@{OnPointerClick}}
+\index{OnPointerClick@{OnPointerClick}!GameBoard@{GameBoard}}
+\doxysubsubsection{\texorpdfstring{OnPointerClick()}{OnPointerClick()}}
+{\footnotesize\ttfamily void Game\+Board.\+On\+Pointer\+Click (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+Automatically called by the Unity UI system since we have implemented the IPointer\+Click\+Handler interface \mbox{\Hypertarget{class_game_board_a2954899d041cd62815f97f398f8f9fa0}\label{class_game_board_a2954899d041cd62815f97f398f8f9fa0}} 
+\index{GameBoard@{GameBoard}!SetBoardData@{SetBoardData}}
+\index{SetBoardData@{SetBoardData}!GameBoard@{GameBoard}}
+\doxysubsubsection{\texorpdfstring{SetBoardData()}{SetBoardData()}}
+{\footnotesize\ttfamily void Game\+Board.\+Set\+Board\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_tic_tac_toe_board_data}{Tic\+Tac\+Toe\+Board\+Data}}}]{p\+Board\+Data }\end{DoxyParamCaption})}
+
+Updates the whole board view to reflect the given board data. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Piet/\+Documents/\+School/\+Minor\+Skilled/\+Minor\+Skilled\+Project/client/\+Assets/\+Scripts/\+Pong/Game\+Board.\+cs\end{DoxyCompactItemize}

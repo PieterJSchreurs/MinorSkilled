@@ -1,5 +1,10 @@
 \hypertarget{classserver_1_1_game_room}{}\doxysection{server.\+Game\+Room Class Reference}
 \label{classserver_1_1_game_room}\index{server.GameRoom@{server.GameRoom}}
+
+
+This is a gameroom in which a Game can run.  
+
+
 Inheritance diagram for server.\+Game\+Room\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,81 +28,43 @@ override void \mbox{\hyperlink{classserver_1_1_game_room_ad3362faaa051be5cd1c61d
 \mbox{\Hypertarget{classserver_1_1_game_room_ab728a9c8e3358c171cc205ffa731a1dd}\label{classserver_1_1_game_room_ab728a9c8e3358c171cc205ffa731a1dd}} 
 override void {\bfseries add\+Member} (\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Member)
 \item 
-\mbox{\Hypertarget{classserver_1_1_game_room_a93bea95ce6feb15be499a4eba067d500}\label{classserver_1_1_game_room_a93bea95ce6feb15be499a4eba067d500}} 
-override void {\bfseries handle\+Network\+Message} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
-\end{DoxyCompactItemize}
+override void \mbox{\hyperlink{classserver_1_1_game_room_a93bea95ce6feb15be499a4eba067d500}{handle\+Network\+Message}} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
+\begin{DoxyCompactList}\small\item\em Handles incoming data messages. Checks of which type the incoming message is and sents it to accordingly to the right handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classserver_1_1_game_room_a787e9a9929d8bd4d5ac2c967eee14c5e}\label{classserver_1_1_game_room_a787e9a9929d8bd4d5ac2c967eee14c5e}} 
-bool {\bfseries Is\+Game\+In\+Play}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classserver_1_1_game_room_af6601aa59fadc7c1884077541e641084}\label{classserver_1_1_game_room_af6601aa59fadc7c1884077541e641084}} 
-void {\bfseries reset\+Board} ()
-\item 
-\mbox{\Hypertarget{classserver_1_1_game_room_abea9c3f7307ba581c74b675daa95c8c3}\label{classserver_1_1_game_room_abea9c3f7307ba581c74b675daa95c8c3}} 
-void {\bfseries send\+People\+In\+Game} ()
-\item 
-\mbox{\Hypertarget{classserver_1_1_game_room_a8ada668c326f69e2f3b0c63f0db1905e}\label{classserver_1_1_game_room_a8ada668c326f69e2f3b0c63f0db1905e}} 
-void {\bfseries handle\+Player\+Input} (\mbox{\hyperlink{classshared_1_1_player_input}{Player\+Input}} p\+Player\+Input, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
-\item 
-void \mbox{\hyperlink{classserver_1_1_game_room_a360e2f210f3d076ee05f158babe39b0d}{handle\+Quit\+Request}} (\mbox{\hyperlink{classshared_1_1_quit_game_request}{Quit\+Game\+Request}} quit\+Game\+Request, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
-\begin{DoxyCompactList}\small\item\em Looks if the last player is gone from the server and deletes the room to saves resources. Otherwise it should handle a pop up to the player. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classserver_1_1_game_room_a58cb28730bca733cd964dc7fddeafa98}\label{classserver_1_1_game_room_a58cb28730bca733cd964dc7fddeafa98}} 
-void {\bfseries handle\+Make\+Move\+Request} (\mbox{\hyperlink{classshared_1_1_make_move_request}{Make\+Move\+Request}} p\+Message, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classserver_1_1_game_room_a142db62e7c7521f54abe7855ce511ef4}\label{classserver_1_1_game_room_a142db62e7c7521f54abe7855ce511ef4}} 
-\mbox{\hyperlink{classserver_1_1_tic_tac_toe_board}{Tic\+Tac\+Toe\+Board}} {\bfseries \+\_\+board} = new \mbox{\hyperlink{classserver_1_1_tic_tac_toe_board}{Tic\+Tac\+Toe\+Board}}()
-\item 
-\mbox{\Hypertarget{classserver_1_1_game_room_a63894f8cda4e003b3ecd979575b6a35c}\label{classserver_1_1_game_room_a63894f8cda4e003b3ecd979575b6a35c}} 
-\mbox{\hyperlink{classshared_1_1_pong_data}{Pong\+Data}} {\bfseries \+\_\+pong\+Data} = new \mbox{\hyperlink{classshared_1_1_pong_data}{Pong\+Data}}()
-\item 
-\mbox{\Hypertarget{classserver_1_1_game_room_adcbebf5e20a62baf6f1a4e263ceb4d79}\label{classserver_1_1_game_room_adcbebf5e20a62baf6f1a4e263ceb4d79}} 
-List$<$ \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} $>$ {\bfseries \+\_\+players} = new List$<$\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}}$>$()
-\item 
-\mbox{\Hypertarget{classserver_1_1_game_room_a2070045d401c91d8ecda131e74b982a9}\label{classserver_1_1_game_room_a2070045d401c91d8ecda131e74b982a9}} 
-\mbox{\hyperlink{classserver_1_1_t_c_p_game_server}{TCPGame\+Server}} {\bfseries \+\_\+game\+Server}
-\item 
-\mbox{\Hypertarget{classserver_1_1_game_room_a8ecdc272b12bfe296d3b9689f47bbb36}\label{classserver_1_1_game_room_a8ecdc272b12bfe296d3b9689f47bbb36}} 
-bool {\bfseries \+\_\+game\+Over} = false
-\item 
-\mbox{\Hypertarget{classserver_1_1_game_room_ad81964b188c7bdc41b033d7e3724a04d}\label{classserver_1_1_game_room_ad81964b188c7bdc41b033d7e3724a04d}} 
-bool {\bfseries \+\_\+game\+Aborted} = false
+bool {\bfseries Is\+Game\+In\+Play}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-This room runs a single Game (at a time).
+This is a gameroom in which a Game can run. 
 
-The \textquotesingle{}Game\textquotesingle{} is very simple at the moment\+:
-\begin{DoxyItemize}
-\item all client moves are broadcasted to all clients 
-\end{DoxyItemize}
+
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classserver_1_1_game_room_a360e2f210f3d076ee05f158babe39b0d}\label{classserver_1_1_game_room_a360e2f210f3d076ee05f158babe39b0d}} 
-\index{server.GameRoom@{server.GameRoom}!handleQuitRequest@{handleQuitRequest}}
-\index{handleQuitRequest@{handleQuitRequest}!server.GameRoom@{server.GameRoom}}
-\doxysubsubsection{\texorpdfstring{handleQuitRequest()}{handleQuitRequest()}}
-{\footnotesize\ttfamily void server.\+Game\+Room.\+handle\+Quit\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_quit_game_request}{Quit\+Game\+Request}}}]{quit\+Game\+Request,  }\item[{\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}}}]{p\+Sender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{classserver_1_1_game_room_a93bea95ce6feb15be499a4eba067d500}\label{classserver_1_1_game_room_a93bea95ce6feb15be499a4eba067d500}} 
+\index{server.GameRoom@{server.GameRoom}!handleNetworkMessage@{handleNetworkMessage}}
+\index{handleNetworkMessage@{handleNetworkMessage}!server.GameRoom@{server.GameRoom}}
+\doxysubsubsection{\texorpdfstring{handleNetworkMessage()}{handleNetworkMessage()}}
+{\footnotesize\ttfamily override void server.\+Game\+Room.\+handle\+Network\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}}}]{p\+Message,  }\item[{\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}}}]{p\+Sender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
 
-Looks if the last player is gone from the server and deletes the room to saves resources. Otherwise it should handle a pop up to the player. 
+Handles incoming data messages. Checks of which type the incoming message is and sents it to accordingly to the right handler. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em quit\+Game\+Request} & \\
+{\em p\+Message} & \\
 \hline
 {\em p\+Sender} & \\
 \hline
 \end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classserver_1_1_room}{server.\+Room}}.
+
 \mbox{\Hypertarget{classserver_1_1_game_room_ad3362faaa051be5cd1c61d5f3253b6ad}\label{classserver_1_1_game_room_ad3362faaa051be5cd1c61d5f3253b6ad}} 
 \index{server.GameRoom@{server.GameRoom}!Update@{Update}}
 \index{Update@{Update}!server.GameRoom@{server.GameRoom}}

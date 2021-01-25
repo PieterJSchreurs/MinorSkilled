@@ -21,68 +21,11 @@ override void {\bfseries Exit\+State} ()
 \mbox{\Hypertarget{class_lobby_state_ae7b4e3e85d2b68950fb85901fd4b24f8}\label{class_lobby_state_ae7b4e3e85d2b68950fb85901fd4b24f8}} 
 override void {\bfseries handle\+Network\+Message} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message)
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{class_lobby_state_a77b778181b62fdd31f8d7ae37a17a3ae}{on\+Text\+Entered}} (string p\+Text)
-\item 
-void \mbox{\hyperlink{class_lobby_state_aeb906054012a595e190e6029701d4132}{on\+Ready\+Toggle\+Clicked}} (bool p\+New\+Value)
-\item 
-\mbox{\Hypertarget{class_lobby_state_a41854f0e28775a46771bfd39fe563ed0}\label{class_lobby_state_a41854f0e28775a46771bfd39fe563ed0}} 
-void {\bfseries On\+Drop\+Down\+Value\+Changed} (Dropdown p\+Value)
-\item 
-\mbox{\Hypertarget{class_lobby_state_abb4fe6dfbb7238659eb6a7d0a5db53e6}\label{class_lobby_state_abb4fe6dfbb7238659eb6a7d0a5db53e6}} 
-void {\bfseries Fill\+Drop\+Down} (string p\+Name)
-\item 
-\mbox{\Hypertarget{class_lobby_state_a09f3deb08cd2fdaca4ec3210710405cb}\label{class_lobby_state_a09f3deb08cd2fdaca4ec3210710405cb}} 
-void {\bfseries add\+Output} (string p\+Info)
-\item 
-void \mbox{\hyperlink{class_lobby_state_ac7fcec5047796898316fa75907f36eae}{Update}} ()
-\item 
-\mbox{\Hypertarget{class_lobby_state_a0d8eb38b172ee435a94c768dd97b94a0}\label{class_lobby_state_a0d8eb38b172ee435a94c768dd97b94a0}} 
-void {\bfseries handle\+Chat\+Message} (\mbox{\hyperlink{classshared_1_1_chat_message}{Chat\+Message}} p\+Message)
-\item 
-\mbox{\Hypertarget{class_lobby_state_a0cbb2c1b50c0c57419f7a266d7691fb6}\label{class_lobby_state_a0cbb2c1b50c0c57419f7a266d7691fb6}} 
-void {\bfseries handle\+Room\+Joined\+Event} (\mbox{\hyperlink{classshared_1_1_room_joined_event}{Room\+Joined\+Event}} p\+Message)
-\item 
-\mbox{\Hypertarget{class_lobby_state_a1bb6e56b4aebe86bcbe98370ddd10b5b}\label{class_lobby_state_a1bb6e56b4aebe86bcbe98370ddd10b5b}} 
-void {\bfseries handle\+Lobby\+Info\+Update} (\mbox{\hyperlink{classshared_1_1_lobby_info_update}{Lobby\+Info\+Update}} p\+Message)
-\item 
-\mbox{\Hypertarget{class_lobby_state_a7d70886a803441ac27a9abe395f34e0b}\label{class_lobby_state_a7d70886a803441ac27a9abe395f34e0b}} 
-void {\bfseries handle\+Game\+List\+Answer} (\mbox{\hyperlink{classshared_1_1_game_list_answer}{Game\+List\+Answer}} p\+Message)
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_lobby_state_a901fcd4128d4190ca48838eb8023b1ff}\label{class_lobby_state_a901fcd4128d4190ca48838eb8023b1ff}} 
-bool {\bfseries auto\+Queue\+For\+Game} = false
-\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 \textquotesingle{}Chat\textquotesingle{} state while you are waiting to start a game where you can signal that you are ready or not. 
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_lobby_state_aeb906054012a595e190e6029701d4132}\label{class_lobby_state_aeb906054012a595e190e6029701d4132}} 
-\index{LobbyState@{LobbyState}!onReadyToggleClicked@{onReadyToggleClicked}}
-\index{onReadyToggleClicked@{onReadyToggleClicked}!LobbyState@{LobbyState}}
-\doxysubsubsection{\texorpdfstring{onReadyToggleClicked()}{onReadyToggleClicked()}}
-{\footnotesize\ttfamily void Lobby\+State.\+on\+Ready\+Toggle\+Clicked (\begin{DoxyParamCaption}\item[{bool}]{p\+New\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-Called when you click on the ready checkbox \mbox{\Hypertarget{class_lobby_state_a77b778181b62fdd31f8d7ae37a17a3ae}\label{class_lobby_state_a77b778181b62fdd31f8d7ae37a17a3ae}} 
-\index{LobbyState@{LobbyState}!onTextEntered@{onTextEntered}}
-\index{onTextEntered@{onTextEntered}!LobbyState@{LobbyState}}
-\doxysubsubsection{\texorpdfstring{onTextEntered()}{onTextEntered()}}
-{\footnotesize\ttfamily void Lobby\+State.\+on\+Text\+Entered (\begin{DoxyParamCaption}\item[{string}]{p\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-Called when you enter text and press enter. \mbox{\Hypertarget{class_lobby_state_ac7fcec5047796898316fa75907f36eae}\label{class_lobby_state_ac7fcec5047796898316fa75907f36eae}} 
-\index{LobbyState@{LobbyState}!Update@{Update}}
-\index{Update@{Update}!LobbyState@{LobbyState}}
-\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily void Lobby\+State.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-////////////////////////////////////////////////////////////////// NETWORK MESSAGE PROCESSING ////////////////////////////////////////////////////////////////// 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

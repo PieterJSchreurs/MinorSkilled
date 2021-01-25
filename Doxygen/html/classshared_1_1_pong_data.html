@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Minor: shared.PongData Class Reference</title>
+<title>Minor Skilled: shared.PongData Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,10 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Minor
-   &#160;<span id="projectnumber">1</span>
+   <div id="projectname">Minor Skilled
+   &#160;<span id="projectnumber">1.1</span>
    </div>
-   <div id="projectbrief">This is my minor</div>
   </td>
  </tr>
  </tbody>
@@ -70,7 +69,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classshared_1_1_pong_data-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">shared.PongData Class Reference</div>  </div>
@@ -82,7 +80,7 @@ Inheritance diagram for shared.PongData:</div>
  <div class="center">
   <img src="classshared_1_1_pong_data.png" usemap="#shared.PongData_map" alt=""/>
   <map id="shared.PongData_map" name="shared.PongData_map">
-<area href="classshared_1_1_a_serializable.html" alt="shared.ASerializable" shape="rect" coords="0,0,130,24"/>
+<area href="classshared_1_1_a_serializable.html" title="Classes that extend ASerializable can (de)serialize themselves into/out of a Packet instance...." alt="shared.ASerializable" shape="rect" coords="0,0,130,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -91,11 +89,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c44e48b81b9a6c6847db36cb7b28cba"><td class="memItemLeft" align="right" valign="top"><a id="a3c44e48b81b9a6c6847db36cb7b28cba"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>PlayerInput</b> (int pInput, int pPlayer)</td></tr>
 <tr class="separator:a3c44e48b81b9a6c6847db36cb7b28cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0206c532825f6740c187d96dc6e1d342"><td class="memItemLeft" align="right" valign="top"><a id="a0206c532825f6740c187d96dc6e1d342"></a>
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>Serialize</b> (<a class="el" href="classshared_1_1_packet.html">Packet</a> pPacket)</td></tr>
+<tr class="memitem:a0206c532825f6740c187d96dc6e1d342"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshared_1_1_pong_data.html#a0206c532825f6740c187d96dc6e1d342">Serialize</a> (<a class="el" href="classshared_1_1_packet.html">Packet</a> pPacket)</td></tr>
+<tr class="memdesc:a0206c532825f6740c187d96dc6e1d342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize the positions of the paddles.  <a href="classshared_1_1_pong_data.html#a0206c532825f6740c187d96dc6e1d342">More...</a><br /></td></tr>
 <tr class="separator:a0206c532825f6740c187d96dc6e1d342"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a430d8b6904fdbfd28e1c097e3fcba426"><td class="memItemLeft" align="right" valign="top"><a id="a430d8b6904fdbfd28e1c097e3fcba426"></a>
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>Deserialize</b> (<a class="el" href="classshared_1_1_packet.html">Packet</a> pPacket)</td></tr>
+<tr class="memitem:a430d8b6904fdbfd28e1c097e3fcba426"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshared_1_1_pong_data.html#a430d8b6904fdbfd28e1c097e3fcba426">Deserialize</a> (<a class="el" href="classshared_1_1_packet.html">Packet</a> pPacket)</td></tr>
+<tr class="memdesc:a430d8b6904fdbfd28e1c097e3fcba426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize the positions of the paddles.  <a href="classshared_1_1_pong_data.html#a430d8b6904fdbfd28e1c097e3fcba426">More...</a><br /></td></tr>
 <tr class="separator:a430d8b6904fdbfd28e1c097e3fcba426"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98d1652f151049b80781840f888931c0"><td class="memItemLeft" align="right" valign="top"><a id="a98d1652f151049b80781840f888931c0"></a>
 override string&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</b> ()</td></tr>
@@ -107,19 +105,106 @@ override string&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a94bfde921939f45282c21dd0caa916c8"><td class="memItemLeft" align="right" valign="top"><a id="a94bfde921939f45282c21dd0caa916c8"></a>
-float[]&#160;</td><td class="memItemRight" valign="bottom"><b>paddleLeftVelocity</b> = new float[2]</td></tr>
-<tr class="separator:a94bfde921939f45282c21dd0caa916c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55dfc34414821670a7d916be2d693c2f"><td class="memItemLeft" align="right" valign="top"><a id="a55dfc34414821670a7d916be2d693c2f"></a>
-float[]&#160;</td><td class="memItemRight" valign="bottom"><b>paddleRightVelocity</b> = new float[2]</td></tr>
-<tr class="separator:a55dfc34414821670a7d916be2d693c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:aeff063f2b025cc865ff9927bb31f8ec1"><td class="memItemLeft" align="right" valign="top"><a id="aeff063f2b025cc865ff9927bb31f8ec1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>resetBoardData</b> ()</td></tr>
-<tr class="separator:aeff063f2b025cc865ff9927bb31f8ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e1f929d2472b1ac05250a4e02800856"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshared_1_1_pong_data.html#a8e1f929d2472b1ac05250a4e02800856">paddleLeftPos</a> = new float[2] { -5, 0 }</td></tr>
+<tr class="memdesc:a8e1f929d2472b1ac05250a4e02800856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default state positions.  <a href="classshared_1_1_pong_data.html#a8e1f929d2472b1ac05250a4e02800856">More...</a><br /></td></tr>
+<tr class="separator:a8e1f929d2472b1ac05250a4e02800856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ce3d9c403a00d4bc91c582184fb684"><td class="memItemLeft" align="right" valign="top"><a id="a72ce3d9c403a00d4bc91c582184fb684"></a>
+float[]&#160;</td><td class="memItemRight" valign="bottom"><b>paddleRightPos</b> = new float[2] { 5, 0 }</td></tr>
+<tr class="separator:a72ce3d9c403a00d4bc91c582184fb684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a659039acf2c1d9b9d4df8d6926348c0c"><td class="memItemLeft" align="right" valign="top"><a id="a659039acf2c1d9b9d4df8d6926348c0c"></a>
+float[]&#160;</td><td class="memItemRight" valign="bottom"><b>ballVelocity</b> = new float[2] { 0, 0 }</td></tr>
+<tr class="separator:a659039acf2c1d9b9d4df8d6926348c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a430d8b6904fdbfd28e1c097e3fcba426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a430d8b6904fdbfd28e1c097e3fcba426">&#9670;&nbsp;</a></span>Deserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void shared.PongData.Deserialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classshared_1_1_packet.html">Packet</a>&#160;</td>
+          <td class="paramname"><em>pPacket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deserialize the positions of the paddles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pPacket</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classshared_1_1_a_serializable.html">shared.ASerializable</a>.</p>
+
+</div>
+</div>
+<a id="a0206c532825f6740c187d96dc6e1d342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0206c532825f6740c187d96dc6e1d342">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void shared.PongData.Serialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classshared_1_1_packet.html">Packet</a>&#160;</td>
+          <td class="paramname"><em>pPacket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Serialize the positions of the paddles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pPacket</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classshared_1_1_a_serializable.html">shared.ASerializable</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8e1f929d2472b1ac05250a4e02800856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e1f929d2472b1ac05250a4e02800856">&#9670;&nbsp;</a></span>paddleLeftPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] shared.PongData.paddleLeftPos = new float[2] { -5, 0 }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default state positions. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Users/Piet/Documents/School/MinorSkilled/MinorSkilledProject/shared/src/model/PongData.cs</li>
 </ul>

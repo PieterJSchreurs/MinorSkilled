@@ -15,15 +15,11 @@ public class LobbyView : View
     [SerializeField] private ScrollRect _scrollRect = null;
     [SerializeField] private Toggle _toggleReady = null;
     [SerializeField] public Dropdown _gameSelecter = null;
-    //[SerializeField] private GameObject _pongUI = null;
-    //[SerializeField] private GameObject _pongPlayingField = null;
-    //[SerializeField] private GameObject _tictactoeUI = null;
 
+    private bool _focusedRequested = false;     //weird unity stuff as usual 
+    private bool _scrollRequested = false;      //weird unity stuff as usual 
 
-    private bool _focusedRequested = false;     //weird unity stuff as usual ;)
-    private bool _scrollRequested = false;      //weird unity stuff as usual ;)
-
-    //the events you can register for
+    //the events that needs to be monitored.
     public event Action<string> OnChatTextEntered = delegate { };
     public event Action<bool> OnReadyToggleClicked = delegate { };
     public event Action<Dropdown> OnDropDownValueChanged = delegate { };
@@ -52,6 +48,9 @@ public class LobbyView : View
         checkFocus();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     private void checkFocus()
     {
         if (_focusedRequested)
@@ -68,34 +67,56 @@ public class LobbyView : View
         }
     }
 
+    /// <summary>
+    /// Sets the title of the lobby.
+    /// </summary>
+    /// <param name="pHeading"></param>
     public void SetLobbyHeading (string pHeading)
     {
         _textHeading.text = pHeading;
     }
 
+    /// <summary>
+    /// Adds a string to the chatbox.
+    /// </summary>
+    /// <param name="pOutput"></param>
     public void AddOutput(string pOutput)
     {
         _textOutput.text += pOutput + "\n";
         _scrollRequested = true;
     }
 
+    /// <summary>
+    /// Clears the chatbox.
+    /// </summary>
     public void ClearOutput()
     {
         _textOutput.text = "";
         _scrollRequested = true;
     }
 
+    /// <summary>
+    /// Clears the chatbox input.
+    /// </summary>
     public void ClearInput()
     {
         _inputFieldChat.text = "";
         _focusedRequested = true;
     }
 
+    /// <summary>
+    /// Sets a ready toggle to on or off.
+    /// </summary>
+    /// <param name="pValue"></param>
     public void SetReadyToggle (bool pValue)
     {
         _toggleReady.SetIsOnWithoutNotify(pValue);
     }
 
+    /// <summary>
+    /// Adds a value to the dropdown box in the view.
+    /// </summary>
+    /// <param name="pGameName"></param>
     public void AddGameToDropdown(string pGameName)
     {
         _gameSelecter.options.Add(new Dropdown.OptionData() {text = pGameName});

@@ -33,47 +33,31 @@ Key\+Code {\bfseries move\+Down} = Key\+Code.\+S
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_game_state_pong_a18d7701ed41bdef10c626c960847a065}\label{class_game_state_pong_a18d7701ed41bdef10c626c960847a065}} 
-override void {\bfseries handle\+Network\+Message} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message)
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_game_state_pong_a010f195e946952f98001c586f7e037b6}\label{class_game_state_pong_a010f195e946952f98001c586f7e037b6}} 
-void {\bfseries Update} ()
-\item 
-\mbox{\Hypertarget{class_game_state_pong_a9fb2fa0cf376ea961c71011e57c60b00}\label{class_game_state_pong_a9fb2fa0cf376ea961c71011e57c60b00}} 
-void {\bfseries Fixed\+Update} ()
-\item 
-\mbox{\Hypertarget{class_game_state_pong_a98e5914a831c8b6fc06147aed359f6ee}\label{class_game_state_pong_a98e5914a831c8b6fc06147aed359f6ee}} 
-void {\bfseries handle\+Player\+Input\+Result} (\mbox{\hyperlink{classshared_1_1_player_input_result}{Player\+Input\+Result}} p\+Message)
-\item 
-\mbox{\Hypertarget{class_game_state_pong_a67bac7a76cca1393dba89d7d56e69cd0}\label{class_game_state_pong_a67bac7a76cca1393dba89d7d56e69cd0}} 
-void {\bfseries handle\+Restart\+Game} (\mbox{\hyperlink{classshared_1_1_restart_game}{Restart\+Game}} p\+Restart\+Game)
-\item 
-\mbox{\Hypertarget{class_game_state_pong_ac7c48f2fa3069920c60424179b2948b1}\label{class_game_state_pong_ac7c48f2fa3069920c60424179b2948b1}} 
-void {\bfseries handle\+Names\+In\+Game} (\mbox{\hyperlink{classshared_1_1_names_in_game}{Names\+In\+Game}} p\+Names\+In\+Game)
-\item 
-\mbox{\Hypertarget{class_game_state_pong_a92d6e473a7240359239e9ab16cc3711c}\label{class_game_state_pong_a92d6e473a7240359239e9ab16cc3711c}} 
-void {\bfseries handle\+Quit\+Game} (\mbox{\hyperlink{classshared_1_1_quit_game_request}{Quit\+Game\+Request}} p\+Quit\+Game\+Request)
-\item 
-\mbox{\Hypertarget{class_game_state_pong_a51ca721786b8fe8915dc23125e64f8ce}\label{class_game_state_pong_a51ca721786b8fe8915dc23125e64f8ce}} 
-void {\bfseries On\+Exit\+Button\+Click} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_game_state_pong_abafbe07075702635276c4dc90a08490a}\label{class_game_state_pong_abafbe07075702635276c4dc90a08490a}} 
-Dictionary$<$ int, string $>$ {\bfseries players} = new Dictionary$<$int, string$>$()
-\item 
-\mbox{\Hypertarget{class_game_state_pong_adb5ad05a23abb87ada41e9ef639f16c6}\label{class_game_state_pong_adb5ad05a23abb87ada41e9ef639f16c6}} 
-bool {\bfseries \+\_\+is\+Moving} = true
-\end{DoxyCompactItemize}
+override void \mbox{\hyperlink{class_game_state_pong_a18d7701ed41bdef10c626c960847a065}{handle\+Network\+Message}} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message)
+\begin{DoxyCompactList}\small\item\em Handles incoming network messages after it checks which protocol it is. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 This is where we \textquotesingle{}play\textquotesingle{} a game. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_state_pong_a18d7701ed41bdef10c626c960847a065}\label{class_game_state_pong_a18d7701ed41bdef10c626c960847a065}} 
+\index{GameStatePong@{GameStatePong}!handleNetworkMessage@{handleNetworkMessage}}
+\index{handleNetworkMessage@{handleNetworkMessage}!GameStatePong@{GameStatePong}}
+\doxysubsubsection{\texorpdfstring{handleNetworkMessage()}{handleNetworkMessage()}}
+{\footnotesize\ttfamily override void Game\+State\+Pong.\+handle\+Network\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}}}]{p\+Message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles incoming network messages after it checks which protocol it is. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Message} & \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

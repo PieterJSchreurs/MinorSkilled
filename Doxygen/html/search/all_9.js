@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['onreadytoggleclicked_45',['onReadyToggleClicked',['../class_lobby_state.html#aeb906054012a595e190e6029701d4132',1,'LobbyState']]],
-  ['ontextentered_46',['onTextEntered',['../class_lobby_state.html#a77b778181b62fdd31f8d7ae37a17a3ae',1,'LobbyState']]]
+  ['makemove_48',['MakeMove',['../classserver_1_1_tic_tac_toe_board.html#a0aafe5b06902d8bd4a65d247ca76a1d7',1,'server::TicTacToeBoard']]],
+  ['makemoverequest_49',['MakeMoveRequest',['../classshared_1_1_make_move_request.html',1,'shared']]],
+  ['makemoveresult_50',['MakeMoveResult',['../classshared_1_1_make_move_result.html',1,'shared']]]
 ];

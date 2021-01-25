@@ -21,17 +21,6 @@ override void {\bfseries add\+Member} (\mbox{\hyperlink{classshared_1_1_tcp_mess
 \mbox{\Hypertarget{classserver_1_1_login_room_a1dce1793ca2f7374e0d44faa92ebee52}\label{classserver_1_1_login_room_a1dce1793ca2f7374e0d44faa92ebee52}} 
 override void {\bfseries handle\+Network\+Message} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{classserver_1_1_login_room_a5b4d62d9d9a87d4ba6b08b4d60e72a01}{handle\+Player\+Join\+Request}} (\mbox{\hyperlink{classshared_1_1_player_join_request}{Player\+Join\+Request}} p\+Message, \mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}} p\+Sender)
-\end{DoxyCompactItemize}
-\doxysubsection*{Static Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classserver_1_1_login_room_acfed7862b151efec4bbad39f2e353944}\label{classserver_1_1_login_room_acfed7862b151efec4bbad39f2e353944}} 
-const int {\bfseries MAX\+\_\+\+MEMBERS} = 50
-\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -39,15 +28,6 @@ const int {\bfseries MAX\+\_\+\+MEMBERS} = 50
 The \mbox{\hyperlink{classserver_1_1_login_room}{Login\+Room}} is the first room clients \textquotesingle{}enter\textquotesingle{} until the client identifies himself with a Player\+Join\+Request. If the client sends the wrong type of request, it will be kicked.
 
 A connected client that never sends anything will be stuck in here for life, unless the client disconnects (that will be detected in due time). 
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classserver_1_1_login_room_a5b4d62d9d9a87d4ba6b08b4d60e72a01}\label{classserver_1_1_login_room_a5b4d62d9d9a87d4ba6b08b4d60e72a01}} 
-\index{server.LoginRoom@{server.LoginRoom}!handlePlayerJoinRequest@{handlePlayerJoinRequest}}
-\index{handlePlayerJoinRequest@{handlePlayerJoinRequest}!server.LoginRoom@{server.LoginRoom}}
-\doxysubsubsection{\texorpdfstring{handlePlayerJoinRequest()}{handlePlayerJoinRequest()}}
-{\footnotesize\ttfamily void server.\+Login\+Room.\+handle\+Player\+Join\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classshared_1_1_player_join_request}{Player\+Join\+Request}}}]{p\+Message,  }\item[{\mbox{\hyperlink{classshared_1_1_tcp_message_channel}{Tcp\+Message\+Channel}}}]{p\+Sender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-Tell the client he is accepted and move the client to the lobby room. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

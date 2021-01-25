@@ -6,13 +6,9 @@ using System.Linq;
 
 namespace server
 {
-    /**
-	 * This room runs a single Game (at a time). 
-	 * 
-	 * The 'Game' is very simple at the moment:
-	 *	- all client moves are broadcasted to all clients
-	 *
-	 */
+    /// <summary>
+    /// This is a gameroom in which a Game can run.
+    /// </summary>
     class GameRoom : Room
     {
         public bool IsGameInPlay { get; private set; }
@@ -21,9 +17,10 @@ namespace server
         private PongData _pongData = new PongData();
         private List<TcpMessageChannel> _players = new List<TcpMessageChannel>();
         private TCPGameServer _gameServer;
+        private PlayerInputResult _playerInputResult = new PlayerInputResult();
         private bool _gameOver = false;
         private bool _gameAborted = false;
-        private int counter = 0;
+        private bool _updated = false;
 
         public GameRoom(TCPGameServer pOwner) : base(pOwner)
         {
@@ -81,8 +78,19 @@ namespace server
             {
                 Log.LogInfo("People left the game...", this);
             }
+            if (!_updated)
+            {
+                UpdatePlayersBoard();
+                _updated = true;
+            }
         }
 
+        /// <summary>
+        /// Handles incoming data messages.
+        /// Checks of which type the incoming message is and sents it to accordingly to the right handler.
+        /// </summary>
+        /// <param name="pMessage"></param>
+        /// <param name="pSender"></param>
         protected override void handleNetworkMessage(ASerializable pMessage, TcpMessageChannel pSender)
         {
             if (pMessage is MakeMoveRequest)
@@ -99,16 +107,16 @@ namespace server
             }
         }
 
+        /// <summary>
+        /// Only fires when a user input is handled.
+        /// Gets the playerinput and parses it to the board.
+        /// </summary>
+        /// <param name="pPlayerInput"></param>
+        /// <param name="pSender"></param>
         private void handlePlayerInput(PlayerInput pPlayerInput, TcpMessageChannel pSender)
         {
-            counter++;
-            Log.LogInfo("Sending : " + counter, this);
             _pongData.PlayerInput(pPlayerInput.playerInput, _players.IndexOf(pSender));
-            PlayerInputResult playerInputResult = new PlayerInputResult();
-            playerInputResult.whoMadeTheMove = _players.IndexOf(pSender);
-            playerInputResult._data = _pongData;
-            //playerInputResult.pongData = _pongBoard.GetBoardData();
-            sendToAll(playerInputResult);
+            _updated = false;
         }
 
         /// <summary>
@@ -132,6 +140,16 @@ namespace server
             }
         }
 
+        /// <summary>
+        /// The server received a request to make a move from a player.
+        /// It will in turn try to make the move onto the board data.
+        /// If the move is allowed, it will then return the result of the move.
+        /// 
+        /// It will also inform the player via a ChatMessage if a player has won or the move was invalid.
+        /// Updates whose turn it is.
+        /// </summary>
+        /// <param name="pMessage"></param>
+        /// <param name="pSender"></param>
         private void handleMakeMoveRequest(MakeMoveRequest pMessage, TcpMessageChannel pSender)
         {
             if (!_gameOver)
@@ -160,6 +178,12 @@ namespace server
                         msg.message = (_gameServer.GetPlayerInfo(_players[_board.GetBoardData().WhoHasWon() - 1]).userName + " has won.");
                         sendToAll(msg);
                         _gameOver = true;
+                    } else
+                    {
+                        //Clear chatbox.
+                        ChatMessage msg = new ChatMessage();
+                        msg.message = ("");
+                        sendToAll(msg);
                     }
                 }
                 else
@@ -171,5 +195,13 @@ namespace server
             }
         }
 
+        /// <summary>
+        /// Sends the updated data of the pong board to all players.
+        /// </summary>
+        private void UpdatePlayersBoard()
+        {
+            _playerInputResult._data = _pongData;
+            sendToAll(_playerInputResult);
+        }
     }
 }

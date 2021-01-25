@@ -21,54 +21,11 @@ override void {\bfseries Exit\+State} ()
 \mbox{\Hypertarget{class_login_state_a908be8b3eb853cccf73be20dc38b6b8c}\label{class_login_state_a908be8b3eb853cccf73be20dc38b6b8c}} 
 override void {\bfseries handle\+Network\+Message} (\mbox{\hyperlink{classshared_1_1_a_serializable}{ASerializable}} p\+Message)
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{class_login_state_ab879184ce19cb916e447751acb138c41}{Connect}} ()
-\item 
-\mbox{\Hypertarget{class_login_state_a175e68a189aad910aa18c4d8ec3daf4e}\label{class_login_state_a175e68a189aad910aa18c4d8ec3daf4e}} 
-void {\bfseries try\+To\+Join\+Lobby} ()
-\item 
-void \mbox{\hyperlink{class_login_state_ad0c42a1c5bd6d69a7776774a9f7eb766}{Update}} ()
-\item 
-\mbox{\Hypertarget{class_login_state_ad98f19c0ab3a532d712692af8ba1fcb1}\label{class_login_state_ad98f19c0ab3a532d712692af8ba1fcb1}} 
-void {\bfseries handle\+Player\+Join\+Response} (\mbox{\hyperlink{classshared_1_1_player_join_response}{Player\+Join\+Response}} p\+Message)
-\item 
-\mbox{\Hypertarget{class_login_state_a65bbabc05fb3b654ccf794a24e6dd544}\label{class_login_state_a65bbabc05fb3b654ccf794a24e6dd544}} 
-void {\bfseries handle\+Room\+Joined\+Event} (\mbox{\hyperlink{classshared_1_1_room_joined_event}{Room\+Joined\+Event}} p\+Message)
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_login_state_a66493fbedd83c83f9cb3250b798868b9}\label{class_login_state_a66493fbedd83c83f9cb3250b798868b9}} 
-string {\bfseries \+\_\+server\+IP} = null
-\item 
-\mbox{\Hypertarget{class_login_state_ad467263bcb0946f8abf5f64b916a1de6}\label{class_login_state_ad467263bcb0946f8abf5f64b916a1de6}} 
-int {\bfseries \+\_\+server\+Port} = 0
-\item 
-\mbox{\Hypertarget{class_login_state_abd215d72c075a84806e8b3e6a80f4055}\label{class_login_state_abd215d72c075a84806e8b3e6a80f4055}} 
-bool {\bfseries auto\+Connect\+With\+Random\+Name} = false
-\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 Starting state where you can connect to the server. 
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_login_state_ab879184ce19cb916e447751acb138c41}\label{class_login_state_ab879184ce19cb916e447751acb138c41}} 
-\index{LoginState@{LoginState}!Connect@{Connect}}
-\index{Connect@{Connect}!LoginState@{LoginState}}
-\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}}
-{\footnotesize\ttfamily void Login\+State.\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-Connect to the server (with some client side validation) \mbox{\Hypertarget{class_login_state_ad0c42a1c5bd6d69a7776774a9f7eb766}\label{class_login_state_ad0c42a1c5bd6d69a7776774a9f7eb766}} 
-\index{LoginState@{LoginState}!Update@{Update}}
-\index{Update@{Update}!LoginState@{LoginState}}
-\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily void Login\+State.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-////////////////////////////////////////////////////////////////// NETWORK MESSAGE PROCESSING ////////////////////////////////////////////////////////////////// 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

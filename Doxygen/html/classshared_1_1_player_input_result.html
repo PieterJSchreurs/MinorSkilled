@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Minor: shared.PlayerInputResult Class Reference</title>
+<title>Minor Skilled: shared.PlayerInputResult Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,10 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Minor
-   &#160;<span id="projectnumber">1</span>
+   <div id="projectname">Minor Skilled
+   &#160;<span id="projectnumber">1.1</span>
    </div>
-   <div id="projectbrief">This is my minor</div>
   </td>
  </tr>
  </tbody>
@@ -81,7 +80,7 @@ Inheritance diagram for shared.PlayerInputResult:</div>
  <div class="center">
   <img src="classshared_1_1_player_input_result.png" usemap="#shared.PlayerInputResult_map" alt=""/>
   <map id="shared.PlayerInputResult_map" name="shared.PlayerInputResult_map">
-<area href="classshared_1_1_a_serializable.html" alt="shared.ASerializable" shape="rect" coords="0,0,153,24"/>
+<area href="classshared_1_1_a_serializable.html" title="Classes that extend ASerializable can (de)serialize themselves into/out of a Packet instance...." alt="shared.ASerializable" shape="rect" coords="0,0,153,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -100,12 +99,9 @@ override string&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3e772384f0d4efb783eafb5ead286ab2"><td class="memItemLeft" align="right" valign="top"><a id="a3e772384f0d4efb783eafb5ead286ab2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>whoMadeTheMove</b> = 0</td></tr>
-<tr class="separator:a3e772384f0d4efb783eafb5ead286ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a515dde9604f85824fd99892c21cf02df"><td class="memItemLeft" align="right" valign="top"><a id="a515dde9604f85824fd99892c21cf02df"></a>
-float[]&#160;</td><td class="memItemRight" valign="bottom"><b>vector</b> = new float[4] { 0, 0, 0, 0 }</td></tr>
-<tr class="separator:a515dde9604f85824fd99892c21cf02df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62cda606b8161315815ceb99ae20f071"><td class="memItemLeft" align="right" valign="top"><a id="a62cda606b8161315815ceb99ae20f071"></a>
+<a class="el" href="classshared_1_1_pong_data.html">PongData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_data</b> = new <a class="el" href="classshared_1_1_pong_data.html">PongData</a>()</td></tr>
+<tr class="separator:a62cda606b8161315815ceb99ae20f071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Send from CLIENT to SERVER to indicate the move the client would like to make. Since the board is just an array of cells, move is a simple index. </p>

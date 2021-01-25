@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Minor: ApplicationFSM Class Reference</title>
+<title>Minor Skilled: ApplicationFSM Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,10 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Minor
-   &#160;<span id="projectnumber">1</span>
+   <div id="projectname">Minor Skilled
+   &#160;<span id="projectnumber">1.1</span>
    </div>
-   <div id="projectbrief">This is my minor</div>
   </td>
  </tr>
  </tbody>
@@ -67,8 +66,6 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_application_f_s_m-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ApplicationFSM Class Reference</div>  </div>
@@ -103,25 +100,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a459369021b432180d254e1489479cfb9"><td class="memItemLeft" align="right" valign="top"><a id="a459369021b432180d254e1489479cfb9"></a>
-<a class="el" href="classshared_1_1_tcp_message_channel.html">TcpMessageChannel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channel</b><code> [get, private set]</code></td></tr>
+<a class="el" href="classshared_1_1_tcp_message_channel.html">TcpMessageChannel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channel</b><code> [get]</code></td></tr>
 <tr class="separator:a459369021b432180d254e1489479cfb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a5954c67fce825d8c6706e9b93a19a198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application_f_s_m.html#a5954c67fce825d8c6706e9b93a19a198">Start</a> ()</td></tr>
-<tr class="separator:a5954c67fce825d8c6706e9b93a19a198"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a488eefcf0b97669fa39e15987dde09b1"><td class="memItemLeft" align="right" valign="top"><a id="a488eefcf0b97669fa39e15987dde09b1"></a>
-Dictionary&lt; Type, <a class="el" href="class_application_state.html">ApplicationState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_stateMap</b> = new Dictionary&lt;Type, <a class="el" href="class_application_state.html">ApplicationState</a>&gt;()</td></tr>
-<tr class="separator:a488eefcf0b97669fa39e15987dde09b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2177a8ba9e84b29bcbc32173a84c3a5"><td class="memItemLeft" align="right" valign="top"><a id="ad2177a8ba9e84b29bcbc32173a84c3a5"></a>
-<a class="el" href="class_application_state.html">ApplicationState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_currentState</b> = null</td></tr>
-<tr class="separator:ad2177a8ba9e84b29bcbc32173a84c3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2550d63a570bfcba98eb178f606362df"><td class="memItemLeft" align="right" valign="top"><a id="a2550d63a570bfcba98eb178f606362df"></a>
-<a class="el" href="class_application_state.html">ApplicationState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_startState</b> = null</td></tr>
-<tr class="separator:a2550d63a570bfcba98eb178f606362df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class implements a basic finite state machine, in other words a state switching mechanism.</p>
@@ -174,32 +154,6 @@ Dictionary&lt; Type, <a class="el" href="class_application_state.html">Applicati
 </dd>
 </dl>
 </div>
-
-</div>
-</div>
-<a id="a5954c67fce825d8c6706e9b93a19a198"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5954c67fce825d8c6706e9b93a19a198">&#9670;&nbsp;</a></span>Start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ApplicationFSM.Start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Change state to which state object was specified in the Inspector. </p>
 
 </div>
 </div>

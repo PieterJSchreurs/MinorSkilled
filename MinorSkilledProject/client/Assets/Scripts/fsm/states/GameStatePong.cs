@@ -21,7 +21,7 @@ public class GameStatePong : ApplicationStateWithView<GameView>
     public override void EnterState()
     {
         base.EnterState();
-        view.exitGameButton1.onClick.AddListener(OnExitButtonClick);
+        view.exitGameButton2.onClick.AddListener(OnExitButtonClick);
         view._gamePongObject.SetActive(true);
         view._gameTicTacToeObject.SetActive(false);
     }
@@ -56,13 +56,10 @@ public class GameStatePong : ApplicationStateWithView<GameView>
         }
     }
 
-
-    private void FixedUpdate()
-    {
-       
-    }
-
-
+    /// <summary>
+    /// Handles incoming network messages after it checks which protocol it is.
+    /// </summary>
+    /// <param name="pMessage"></param>
     protected override void handleNetworkMessage(ASerializable pMessage)
     {
         if (pMessage is NamesInGame)
@@ -83,31 +80,26 @@ public class GameStatePong : ApplicationStateWithView<GameView>
         }
     }
 
+    /// <summary>
+    /// Updates the paddle positions with the position given by the server.
+    /// </summary>
+    /// <param name="pMessage"></param>
     private void handlePlayerInputResult(PlayerInputResult pMessage)
-    {
-        float[] vect = new float[4] { pMessage.vector[0], pMessage.vector[1], pMessage.vector[2], pMessage.vector[3] };       
-        _rigidBodyLeft.position = new Vector2(vect[0], vect[1]);
-        _rigidBodyRight.position = new Vector2(vect[2], vect[3]);
+    {   
+        _rigidBodyLeft.position = new Vector2(pMessage._data.paddleLeftPos[0], pMessage._data.paddleLeftPos[1]);
+        _rigidBodyRight.position = new Vector2(pMessage._data.paddleRightPos[0], pMessage._data.paddleRightPos[1]);
     }
 
     //Restart game.
     private void handleRestartGame(RestartGame pRestartGame)
     {
-        //view.gameBoard.ResetBoardData();
+
     }
 
     //Adds people in game lobby to the Dictionary
     private void handleNamesInGame(NamesInGame pNamesInGame)
     {
         players.Add(pNamesInGame.playerID, pNamesInGame.playerName);
-        //if (pNamesInGame.playerID == 0)
-        //{
-        //    view.playerLabel1.text = $"{players[pNamesInGame.playerID]}";
-        //}
-        //else
-        //{
-        //    view.playerLabel2.text = $"{players[pNamesInGame.playerID]}";
-        //}
     }
 
     private void handleQuitGame(QuitGameRequest pQuitGameRequest)

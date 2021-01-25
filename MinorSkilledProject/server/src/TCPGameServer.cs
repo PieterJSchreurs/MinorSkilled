@@ -8,19 +8,15 @@ using System.Linq;
 
 namespace server
 {
-
-    /**
-	 * Basic TCPGameServer that runs our game.
-	 * 
-	 * Server is made up out of different rooms that can hold different members.
-	 * Each member is identified by a TcpMessageChannel, which can also be used for communication.
-	 * In this setup each client is only member of ONE room, but you could change that of course.
-	 * 
-	 * Each room is responsible for cleaning up faulty clients (since it might involve gameplay, status changes etc).
-	 * 
-	 * As you can see this setup is limited/lacking:
-	 * - only 1 game can be played at a time
-	 */
+    /// <summary>
+    /// Basic TCPGameServer that runs our game. 
+    /// Server is made up out of different rooms that can hold different members.
+    /// Each member is identified by a TcpMessageChannel, which can also be used for communication.
+    /// 
+    /// Each room is responsible for cleaning up faulty clients.
+    /// 
+    /// There can be multiple games played at a time.
+    /// </summary>
     class TCPGameServer
     {
         public static void Main(string[] args)
@@ -79,10 +75,10 @@ namespace server
                         pgameRoom.Update();
                     }
                 }
-                Thread.Sleep(100);
+                Thread.Sleep(16);
             }
         }
-
+  
         //provide access to the different rooms on the server 
         public LoginRoom GetLoginRoom() { return _loginRoom; }
         public LobbyRoom GetLobbyRoom() { return _lobbyRoom; }
@@ -123,11 +119,20 @@ namespace server
             _playerInfo.Remove(pClient);
         }
 
+        /// <summary>
+        /// Returns the ID of the game room within the list.
+        /// </summary>
+        /// <param name="pGameRoom"></param>
+        /// <returns></returns>
         public int getGameRoomID(GameRoom pGameRoom)
         {
             return _gameRooms.FirstOrDefault(x => x.Value == pGameRoom).Key;
         }
 
+        /// <summary>
+        /// Removes Gameroom from the list of active gamerooms.
+        /// </summary>
+        /// <param name="pGameRoom"></param>
         public void RemoveGameRoom(GameRoom pGameRoom)
         {
             _gameRooms.Remove(getGameRoomID(pGameRoom));

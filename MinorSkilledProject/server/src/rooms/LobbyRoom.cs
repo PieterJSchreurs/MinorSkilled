@@ -11,9 +11,11 @@ namespace server
     class LobbyRoom : SimpleRoom
     {
         //this list keeps tracks of which players are ready to play a game, this is a subset of the people in this room
-        private List<TcpMessageChannel> _readyMembers = new List<TcpMessageChannel>();
+        private List<TcpMessageChannel> _readymembersTicTac = new List<TcpMessageChannel>();
+        private List<TcpMessageChannel> _readymembersPong = new List<TcpMessageChannel>();
+
         public LobbyRoom(TCPGameServer pOwner) : base(pOwner)
-        { 
+        {
         }
 
         protected override void addMember(TcpMessageChannel pMember)
@@ -41,7 +43,7 @@ namespace server
         protected override void removeMember(TcpMessageChannel pMember)
         {
             base.removeMember(pMember);
-            _readyMembers.Remove(pMember);
+            _readymembersTicTac.Remove(pMember);
 
             sendLobbyUpdateCount();
         }
@@ -61,25 +63,55 @@ namespace server
         /// <param name="pSender"></param>
         private void handleReadyNotification(ChangeReadyStatusRequest pReadyNotification, TcpMessageChannel pSender)
         {
-            //if the given client was not marked as ready yet, mark the client as ready
-            if (pReadyNotification.ready)
+            //Ugly way of solving people not being able to queue against eachother if they have selected a different game.
+            switch (pReadyNotification.gameSelected)
             {
-                if (!_readyMembers.Contains(pSender)) _readyMembers.Add(pSender);
-            }
-            else //if the client is no longer ready, unmark it as ready
-            {
-                _readyMembers.Remove(pSender);
-            }
+                case 0:
+                    {
+                        //if the given client was not marked as ready yet, mark the client as ready
+                        if (pReadyNotification.ready)
+                        {
+                            if (!_readymembersTicTac.Contains(pSender)) _readymembersTicTac.Add(pSender);
+                        }
+                        else //if the client is no longer ready, unmark it as ready
+                        {
+                            _readymembersTicTac.Remove(pSender);
+                        }
 
-            //do we have enough people for a game and is the gameroom not already full (hacky, part of the assignment to 'fix')
-            //Potential: Look at the number of players needed for a room and set the count to that.
-            if (_readyMembers.Count >= 2)
-            {
-                TcpMessageChannel player1 = _readyMembers[0];
-                TcpMessageChannel player2 = _readyMembers[1];
-                removeMember(player1);
-                removeMember(player2);
-                _server.StartGameRoom().StartGame(player1, player2);
+                        //Potential: Look at the number of players needed for a room and set the count to that.
+                        if (_readymembersTicTac.Count >= 2)
+                        {
+                            TcpMessageChannel player1 = _readymembersTicTac[0];
+                            TcpMessageChannel player2 = _readymembersTicTac[1];
+                            removeMember(player1);
+                            removeMember(player2);
+                            _server.StartGameRoom().StartGame(player1, player2);
+                        }
+                    }
+                    break;
+                case 1:
+                    {
+                        //if the given client was not marked as ready yet, mark the client as ready
+                        if (pReadyNotification.ready)
+                        {
+                            if (!_readymembersPong.Contains(pSender)) _readymembersPong.Add(pSender);
+                        }
+                        else //if the client is no longer ready, unmark it as ready
+                        {
+                            _readymembersPong.Remove(pSender);
+                        }
+
+                        //Potential: Look at the number of players needed for a room and set the count to that.
+                        if (_readymembersPong.Count >= 2)
+                        {
+                            TcpMessageChannel player1 = _readymembersPong[0];
+                            TcpMessageChannel player2 = _readymembersPong[1];
+                            removeMember(player1);
+                            removeMember(player2);
+                            _server.StartGameRoom().StartGame(player1, player2);
+                        }
+                    }
+                    break;
             }
 
             //(un)ready-ing / starting a game changes the lobby/ready count so send out an update
@@ -92,11 +124,11 @@ namespace server
         /// </summary>
         /// <param name="gameListRequest"></param>
         /// <param name="pSender"></param>
-        private void handleGameTypes(GameListRequest gameListRequest ,TcpMessageChannel pSender)
+        private void handleGameTypes(GameListRequest gameListRequest, TcpMessageChannel pSender)
         {
             GameListAnswer gameListAnswer = new GameListAnswer();
             gameListAnswer.gameTypes = new GameTypes();
-            gameListAnswer.gameTypes.gameTypes = new string[] { "TicTacToe" , "Pong" };
+            gameListAnswer.gameTypes.gameTypes = new string[] { "TicTacToe", "Pong" };
             pSender.SendMessage(gameListAnswer);
         }
 
@@ -109,7 +141,7 @@ namespace server
         {
             LobbyInfoUpdate lobbyInfoMessage = new LobbyInfoUpdate();
             lobbyInfoMessage.memberCount = memberCount;
-            lobbyInfoMessage.readyCount = _readyMembers.Count;
+            lobbyInfoMessage.readyCount = _readymembersTicTac.Count;
             sendToAll(lobbyInfoMessage);
         }
 

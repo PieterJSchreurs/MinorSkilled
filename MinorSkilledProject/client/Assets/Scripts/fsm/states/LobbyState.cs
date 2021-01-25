@@ -62,16 +62,28 @@ public class LobbyState : ApplicationStateWithView<LobbyView>
         fsm.channel.SendMessage(msg);
     }
 
+    /// <summary>
+    /// Called when the dropdown for the game selecter changed of value.
+    /// </summary>
+    /// <param name="pValue"></param>
     private void OnDropDownValueChanged(Dropdown pValue)
     {
-        Debug.Log(pValue.value +" is selected");
+
     }
 
+    /// <summary>
+    /// Receives a list of games from the server and adds them in the dropdown.
+    /// </summary>
+    /// <param name="pName"></param>
     private void FillDropDown(string pName)
     {
         view.AddGameToDropdown(pName);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="pInfo"></param>
     private void addOutput(string pInfo)
     {
         view.AddOutput(pInfo);

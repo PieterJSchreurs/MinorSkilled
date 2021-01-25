@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Minor: server.LoginRoom Class Reference</title>
+<title>Minor Skilled: server.LoginRoom Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,10 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Minor
-   &#160;<span id="projectnumber">1</span>
+   <div id="projectname">Minor Skilled
+   &#160;<span id="projectnumber">1.1</span>
    </div>
-   <div id="projectbrief">This is my minor</div>
   </td>
  </tr>
  </tbody>
@@ -70,8 +69,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classserver_1_1_login_room-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">server.LoginRoom Class Reference</div>  </div>
@@ -136,22 +133,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>indexOfMember</b> (<a 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>sendChatMessage</b> (<a class="el" href="classshared_1_1_a_serializable.html">ASerializable</a> pMessage, <a class="el" href="classshared_1_1_tcp_message_channel.html">TcpMessageChannel</a> pTcpNotIncluded=null)</td></tr>
 <tr class="separator:a63ded4459b835206b7ff29a1c5feaf8d inherit pro_methods_classserver_1_1_room"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a5b4d62d9d9a87d4ba6b08b4d60e72a01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classserver_1_1_login_room.html#a5b4d62d9d9a87d4ba6b08b4d60e72a01">handlePlayerJoinRequest</a> (<a class="el" href="classshared_1_1_player_join_request.html">PlayerJoinRequest</a> pMessage, <a class="el" href="classshared_1_1_tcp_message_channel.html">TcpMessageChannel</a> pSender)</td></tr>
-<tr class="separator:a5b4d62d9d9a87d4ba6b08b4d60e72a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:acfed7862b151efec4bbad39f2e353944"><td class="memItemLeft" align="right" valign="top"><a id="acfed7862b151efec4bbad39f2e353944"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_MEMBERS</b> = 50</td></tr>
-<tr class="separator:acfed7862b151efec4bbad39f2e353944"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header properties_classserver_1_1_room"><td colspan="2" onclick="javascript:toggleInherit('properties_classserver_1_1_room')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classserver_1_1_room.html">server.Room</a></td></tr>
 <tr class="memitem:ae70f2ebe547a9d04b5fcfe13c1ca2e73 inherit properties_classserver_1_1_room"><td class="memItemLeft" align="right" valign="top"><a id="ae70f2ebe547a9d04b5fcfe13c1ca2e73"></a>
-<a class="el" href="classserver_1_1_t_c_p_game_server.html">TCPGameServer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_server</b><code> [get, private set]</code></td></tr>
+<a class="el" href="classserver_1_1_t_c_p_game_server.html">TCPGameServer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_server</b><code> [get]</code></td></tr>
 <tr class="separator:ae70f2ebe547a9d04b5fcfe13c1ca2e73 inherit properties_classserver_1_1_room"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adde60e22b1db9567fb7f5a05a20071da inherit properties_classserver_1_1_room"><td class="memItemLeft" align="right" valign="top"><a id="adde60e22b1db9567fb7f5a05a20071da"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>memberCount</b><code> [get]</code></td></tr>
@@ -160,45 +146,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>memberCount</b><code> 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classserver_1_1_login_room.html">LoginRoom</a> is the first room clients 'enter' until the client identifies himself with a PlayerJoinRequest. If the client sends the wrong type of request, it will be kicked.</p>
 <p>A connected client that never sends anything will be stuck in here for life, unless the client disconnects (that will be detected in due time). </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5b4d62d9d9a87d4ba6b08b4d60e72a01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b4d62d9d9a87d4ba6b08b4d60e72a01">&#9670;&nbsp;</a></span>handlePlayerJoinRequest()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void server.LoginRoom.handlePlayerJoinRequest </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classshared_1_1_player_join_request.html">PlayerJoinRequest</a>&#160;</td>
-          <td class="paramname"><em>pMessage</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classshared_1_1_tcp_message_channel.html">TcpMessageChannel</a>&#160;</td>
-          <td class="paramname"><em>pSender</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Tell the client he is accepted and move the client to the lobby room. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Users/Piet/Documents/School/MinorSkilled/MinorSkilledProject/server/src/rooms/LoginRoom.cs</li>
 </ul>
 </div><!-- contents -->
